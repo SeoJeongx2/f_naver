@@ -1,0 +1,166 @@
+            body {
+                display: flex;
+                flex-direction: column;
+                margin: 0px;
+                background-color: rgb(232, 235, 230);
+            }
+
+            body a {
+                color: #000;
+                text-decoration: none;
+            }
+
+            .로회 {
+                text-align: right;
+                font-size: 14px;
+                background-color: rgb(172, 185, 172);
+            }
+
+            .로회 a {
+                padding: 0px 10px 0px;
+            }
+
+            .로그인 {
+                border-right: 1px solid #cdcfca;
+            }
+
+            /* 안정감있는 색상의 사이트.*/
+            .banner {
+                border-bottom: 3px solid rgb(30, 71, 30);
+                background-color: rgb(172, 185, 172);
+                text-align: center;
+                padding: 1em 1em 3em;
+            }
+            .banner h1 {
+                margin: 0px;
+            }
+            .grid {
+                /*3단 레이아웃 구조, 미디어 활성시 2단 2행*/
+                display: grid;
+                min-height: calc(100dvh - 183px);
+                grid-template-columns: 190px 1fr 150px;
+                grid-template-areas:
+                "leftbar content rightbar"
+            }
+
+            .leftbar {
+                grid-area: leftbar;
+                border-right: 2px solid rgb(83, 112, 83);
+                background-color: #f1f1f1;
+                font-size: 19px;
+            }
+
+            details {
+                cursor: default;
+            }
+
+            summary {
+                cursor: pointer;
+            }
+
+            .leftbar summary {
+                cursor: pointer;
+                padding: 10px 15px 10px;
+                border: 1px solid rgb(179, 179, 179);
+                border-radius: 8px;
+                background-color: rgb(196, 196, 196);
+            }
+
+            .leftbar details[open] summary::before {
+                transform: rotate(90deg);
+            }
+            
+
+
+            .leftbar a:hover {
+                color: rgb(41, 189, 12);
+            }
+
+            .content {
+                grid-area: content;
+                padding: 25px;
+                font-size: 25px;
+                font-weight: 400;
+                min-height: 0;
+                overflow: auto;
+                
+            }
+
+            .content pre {
+                display: inline-block;
+                font-family: sans-serif;
+                font-weight: 500;
+                font-size: 20px;
+                color: #000;
+            }
+
+            .content details {
+                border-top: 1px solid rgb(210, 210, 210);
+                border-bottom: 1px solid rgb(210, 210, 210);
+            }
+
+            .rightbar {
+                grid-area: rightbar;
+                background-color: rgb(255, 255, 255);
+            }
+
+            .content p {
+                text-indent: 1em;
+
+            }
+
+            .content details[open]>summary {
+                background-color: rgb(205, 214, 207);
+            }
+
+            .content a:hover,
+            .content summary:hover {
+                color: rgb(41, 189, 12);
+            }
+
+            footer {
+                font-size: 13px;
+                border-top:1px solid #000;
+                text-align: center;
+            }
+
+            .ggg {
+                display: inline-block;
+                border-right: 1px solid #ccc;
+                padding: 0px 10px 0px;
+                margin: 15px 0px 15px;
+            }
+
+            .GGGG {
+                padding: 0px 10px 0px;
+                margin: 15px 0px 15px;
+            }
+
+            @media(max-width:600px) {
+
+                /* 반응시 2단 2행 레이아웃 구조*/
+                .grid {
+                    display: grid;
+                    grid-template-columns: 200px 1fr;
+                    grid-template-rows: auto auto auto;
+                    grid-template-areas:
+                        "leftbar rightbar"
+                        "content content"
+                        "footer footer";
+                }
+
+                .rightbar::after {
+                    /* 넓어질때 공간 활용하여 광고 크게*/
+                    content: "돈받고 하는건데 이게 더 넓어야죠 안그래요?";
+                    margin: 1em 0 0;
+                    display: block;
+                }
+
+                footer {
+                    text-align: left;
+                }
+            }
+
+            pre {
+                font-size: 18px;
+            }
