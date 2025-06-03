@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>정호의 연습노트</title>
-        <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정호의 연습노트</title>
+    <link rel="stylesheet" href="style.css">
 </head><!-- 3단 레이아웃 구조로 만들기 -->
 
 <body>
@@ -219,7 +219,8 @@
                     <pre><p>
 &lt;input&gt;		 	기본형 +type 으로서 작동을 시킬 수 있다. 기본형은 text  
 	type="text"  		글을 넣을 수 있는 바. 넣기전 설명은  placeholder="회색으로 설명(가이드문구)". 이미 값이 입력된상태로 로딩은 value=""  
-	type="password"	 	text와 같은 형식이지만 비밀번호처리 해주는 바  
+	type="password"	 	text와 같은 형식이지만 블러 처리를 통해 비밀번호를 보안성강화 해줌
+    type="email"        text와 같은 형식이지만 asd@domain.com식으로 사용했는지 유효성검사가 가능 
 	type="radio"		동그란 체크칸. name으로 투표군을 묶을 수 있고, value를 통해 체크된 값의 의미가 뭔지 설정함.  checked를 통해 미리 체크가능.  
 	type="checkbox"	 	네모난 체크칸 다중선택 가능. 속성값은 라디오와 같음.  
 	type="file"  		파일을 업로드 하는 태그 솔직히 아직 정확히 어떻게 쓰는지 모르겠음.  
@@ -281,7 +282,7 @@ table 	   표를 만들어서 보여줘야 할때 사용.  자체적으로 thead
                     <summary>플렉스 구조와 그리드 구조.</summary>
                     <h2>플렉스 구조와 그리드 구조.</h2>
 
-<pre>웹사이트라는 도화지를 기준으로 원하는 비율 혹은 픽셀값으로 구역을 나누게 되는데 그렇게 나눠진 구역에 맞춰 내가 입력한 결과물이 낑겨들어가면 그리드.
+                    <pre>웹사이트라는 도화지를 기준으로 원하는 비율 혹은 픽셀값으로 구역을 나누게 되는데 그렇게 나눠진 구역에 맞춰 내가 입력한 결과물이 낑겨들어가면 그리드.
 플렉스는 조금더 단순하게 원하는 비율 혹은 픽셀값으로 입력할 결과물이 늘어나고 작아진 상태로 웹에 나타나는것이 플렉스.
 그리드는 세부적인 공간설정으로 세세한 위치를 잡는다면, 플렉스는 단순이 펼치고 쌓고의 작업을 직관적으로 할 수 있음. 따라서 섞어서 사용했을때 좋다고 생각함.
 
@@ -347,9 +348,9 @@ place-self(통합형): align, justify
                 </details>
 
                 <details>
-                    <summary>가상요소 ::before  ::after</summary>
-                    <h2>가상요소 ::before  ::after</h2>
-                        <pre>
+                    <summary>가상요소 ::before ::after</summary>
+                    <h2>가상요소 ::before ::after</h2>
+                    <pre>
                         footer의 컨텐츠를 만들면서 링크간 중앙선을 생성하고 싶었음. footer span:not(:last-child)::before {} 을 통해서 중앙선을 만들면서 가상요소::에 대해서 배움.
                         ( )는 조건, [ ]는 속성...
                         footer					
@@ -385,15 +386,73 @@ place-self(통합형): align, justify
                 <details>
                     <summary>트랜지션과 애니메이션 차이</summary>
                     <p>
-트랜지션은 기본적으로 어떠한 트리거 즉 조건으로 시작. 가령 호버나 액션, 포커스일때 어떤 변화값을 조절하는 속성이라면,
+                        트랜지션은 기본적으로 어떠한 트리거 즉 조건으로 시작. 가령 호버나 액션, 포커스일때 어떤 변화값을 조절하는 속성이라면,
 
-<br>애니메이션의 경우 설계자의 의도에따라 지연시작, 바로시작, 등 트리거 없이 움직이는 값을 설정한대로 실행시킬 수 있음. 
-+@keyframes 을 연동하여 정확한 좌표값으로 세세한 설정이 가능 
+                        <br>애니메이션의 경우 설계자의 의도에따라 지연시작, 바로시작, 등 트리거 없이 움직이는 값을 설정한대로 실행시킬 수 있음.
+                        +@keyframes 을 연동하여 정확한 좌표값으로 세세한 설정이 가능
 
-<br>@keyframes 이름 : 키프레임의 이름 설정과 애니메이션의 모양 위치 스타일등의 시각적인 설정을 하는곳
-<br>animation: 어떻게 움직일 것인지?를 세세히 설정하는것 가령, 지속시간 반복횟수 방향 가속도 등등..
--name: 사용할 키프레임 네임 타깃
-<br>19:11 2025-06-03</p>
+                        <br>@keyframes 이름 : 키프레임의 이름 설정과 애니메이션의 모양 위치 스타일등의 시각적인 설정을 하는곳
+                        <br>animation: 어떻게 움직일 것인지?를 세세히 설정하는것 가령, 지속시간 반복횟수 방향 가속도 등등..
+                        -name: 사용할 키프레임 네임 타깃
+                        <br>19:11 2025-06-03
+                    </p>
+                </details>
+
+                <details>
+                    <summary>반응형 태그 picture 와 전용자식태그 source. + 속성 src , srcset, sizes </summary>
+                    <p>
+                    <pre>
+픽쳐태그를 통해 우리는 웹사이트가 해단 파일의 포맷 형식을 지원하지 않을경우 차선책 혹은 차차선책의 파일을 불러오도록 설정할 수 있음. 
+타입을 통해 지원형식을 설정하고 마지막 img src를 통해 모두 실패시 보여줄 최후의 이미지 선정. 
+이때 alt는 이미지를 불러올 수 없을때 대체 설명을 표시해주는 역할
+
+picture
+  source  srcset= 이미지.webp  type=image/webp
+  source  srcset= 이미지.jpg  type=image/jpeg
+  img src= fallback.jpg
+/picture 
+
+대체용으로 src와 srcset, size를 통해서 반응형 로딩을 할 수 있음. 단, 사이즈에따라 불러올 파일 직접설정.
+     
+img
+  src="default.jpg"
+  srcset="image.jpg 600w, image.png 1200w" (실제 이미지파일의 너비 1200w)
+  sizes="(max-width: 800px) 100vw, 800px"
+  alt="이미지"
+
+00:15 2025-06-04
+
+</pre>
+                    </p>
+                </details>
+
+                <details>
+                    <summary>css 변수값 설정</summary>
+                    <pre>
+마치 태그를 클래스지정으로 스타일에서 한번에 타깃된 클래스를 바꾸는것처럼.
+주기적으로 변할 수 있는 컬러, 크기, 여백값을 변수값으로 설정해두고 한번에 컨트롤하는방법
+
+--변수명 : 변수선언 방식. 변수명은 서로 맞추기만하면 ok. ex)--font-color: red; / --폰트컬러: red; 
+var(--변수명, 없을시 사용(black)): 변수사용법
+
+주로 다크모드, 라이트모드 전환시 사용하며 미디어쿼리, 자바스크립트를 통하여 바디에 클래스가 붙을시 배경, 글자색을 바꾸어 반응시킴.
+03:23 2025-06-04
+</pre>
+                </details>
+
+                <details>
+                    <summary>-</summary>
+                    <p>내용</p>
+                </details>
+
+                <details>
+                    <summary>-</summary>
+                    <p>내용</p>
+                </details>
+
+                <details>
+                    <summary>-</summary>
+                    <p>내용</p>
                 </details>
 
                 <details>
