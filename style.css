@@ -1,8 +1,14 @@
+            
             body {
                 display: flex;
                 flex-direction: column;
                 margin: 0px;
                 background-color: rgb(232, 235, 230);
+                min-height: 100vh;
+            }
+
+            html, body {
+                height: 100%;
             }
 
             body a {
@@ -37,7 +43,7 @@
             .grid {
                 /*3단 레이아웃 구조, 미디어 활성시 2단 2행*/
                 display: grid;
-                min-height: calc(100dvh - 183px);
+                flex: 1;
                 grid-template-columns: 190px 1fr 150px;
                 grid-template-areas:
                 "leftbar content rightbar"
@@ -82,8 +88,11 @@
                 font-size: 25px;
                 font-weight: 400;
                 min-height: 0;
-                overflow: auto;
-                
+
+            }
+
+            .content h2 {
+                display: inline-block;
             }
 
             .content pre {

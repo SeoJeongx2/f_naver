@@ -2,7 +2,8 @@
 <html lang="ko">
 
 <head>
-    <meta="UTF-8">
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             body {
                 display: flex;
@@ -19,6 +20,7 @@
             .로고 {
                 display: flex;
                 justify-content: center;
+                margin-bottom: 50px;
             }
 
             .로고 img {
@@ -55,12 +57,93 @@
             }
 
             .아이디 input {
-                width: 400px;
+                width: 250px;
+                height: 40px;
+                border: 2px solid #ccc;
+                border-radius: 10px 10px 0 0;
+            }
+
+            .패스워드 input {
+                width: 250px;
+                height: 40px;
+                border: 2px solid #ccc;
+                border-radius: 0px;
+            }
+
+            .메일 input {
+                width: 250px;
+                height: 40px;
+                border: 2px solid #ccc;
+                border-radius: 0 0 10px 10px;
+                margin-bottom: 50px;
+            }
+
+            .이름 input {
+                width: 250px;
+                height: 40px;
+                border: 2px solid #ccc;
+                border-radius: 10px 10px 0 0;
+            }
+
+            .번호 input {
+                width: 250px;
+                height: 40px;
+                border: 2px solid #ccc;
             }
 
             .성별 {
                 display: flex;
-                gap: 20px;
+                width: 256px;
+                height: 40px;
+                align-items: center;
+                border: 1px solid #ccc;
+                border-radius: 0 0 10px 10px;                
+            }
+
+            .성별 input{
+                display:none; 
+            }
+
+            .아이디 input:focus, .패스워드 input:focus, .메일 input:focus, .이름 input:focus, .번호 input:focus {
+                outline: none;
+                border-color: rgb(9, 170, 92);
+            }
+
+            .남 {
+                border:2px solid #ccc;
+                font-size: 20px;
+                width: 85px;
+                height: 38px;
+                text-align: center;
+                border-radius: 0 0 0 10px;
+            }
+
+            .여 {
+                border:2px solid #ccc;
+                font-size: 20px;
+                width: 85px;
+                height: 38px;
+                text-align: center;
+            }
+
+            .중 {
+                border:2px solid #ccc;
+                font-size: 13px;
+                width: 85px;
+                text-align: center;
+                border-radius: 0 0 10px 0px;
+            }
+
+            .남:has(input:checked) {
+                border-color: rgb(9, 170, 92);
+            }
+
+            .여:has(input:checked) {
+                border-color: rgb(9, 170, 92);
+            }
+
+            .중:has(input:checked) {
+                border-color: rgb(9, 170, 92);
             }
 
             .제출 input {
@@ -69,11 +152,11 @@
 
             .제출 label {
                 display: flex;
-                background-color: #ccc;
+                background-color: rgb(9, 170, 92);
                 color: #fff;
-                margin-top: 40px;
-                width: 532px;
-                height: 70px;
+                margin-top: 60px;
+                width: 254px;
+                height: 60px;
                 font-size: 35px;
                 justify-content: center;
                 align-items: center;
@@ -88,7 +171,7 @@
                 margin-top: 7px;
                 gap: 15px;
                 border-top: 2px solid #ccc;
-                margin-top: 200px;
+                margin-top: 300px;
             }
 
             footer span {
@@ -136,9 +219,9 @@
                 </div>
 
                 <div class="성별">
-                    <label><input type="radio" name="gender">남자</label>
-                    <label><input type="radio" name="gender">여자</label>
-                    <label><input type="radio" name="gender">그사이 어딘가</label>
+                    <label class="남"><input type="radio" name="gender">남자</label>
+                    <label class="여"><input type="radio" name="gender">여자</label>
+                    <label class="중"><input type="radio" name="gender">그사이<br>어딘가</label>
                 </div>
 
 

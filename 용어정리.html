@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정호의 연습노트</title>
+    <link rel="stylesheet" href="style.css">
+</head><!-- 3단 레이아웃 구조로 만들기 -->
+
+<style>
+    .qw {
+        display: inline-block;
+    }
+
+    .ti {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    dt {
+        font-size: 30px;
+        width: 600;
+        color: dodgerblue;
+    }
+
+    dt span {
+        color: rgb(4, 172, 4);
+    }
+
+    dd {
+        font-size: 20px;
+        width: 400;
+        color: rgb(0, 0, 0);
+    }
+
+    dd span {
+        width: 500;
+        color: rgb(0, 170, 0);
+    }
+
+    
+
+    .re {
+        width: 500;
+        color: rgb(228, 83, 0);
+    }
+
+    .pu {
+        width: 500;
+        color: rgb(185, 0, 176);
+    }
+
+    dd .bl {
+        width: 600;
+        color: dodgerblue;
+    }
+
+    .정렬1,
+    .정렬2 {
+        display: inline-block;
+        width: 500px;
+        height: 30px;
+
+    }
+
+    .grid2 {
+        display: grid;
+        grid-template-columns: auto max-content;
+    }
+</style>
+
+<body>
+    <div class="로회">
+        <a href="로그인.html" class="로그인">로그인</a><a href="회원가입1.html">회원가입</a>
+    </div>
+    <header class="banner">
+        <h1><a href="index.html">정호의 연습노트</a></h1>
+    </header>
+
+    <div class="grid">
+        <aside class="leftbar">
+            <details open>
+                <summary>공부중인 것!</summary>
+                <ul>
+                    <li><a href="1.html">HTML/CSS</a></li>
+                    <li><a href="2.html">자바스크립트</a></li>
+                    <li>미정</li>
+                    <li>미정</li>
+                    <li>미정</li>
+                    <li>미정</li>
+                </ul>
+            </details>
+
+            <details open>
+                <summary>도움을 준 친구들</summary>
+                <ul>
+                    <li><a href="3.html">chat GPT</a></li>
+                    <li><a href="미완.html">유튜브</a></li>
+                    <li><a href="미완.html">타자연습</a></li>
+                    <li>미정</li>
+                    <li>미정</li>
+                    <li>미정</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>발자취</summary>
+                <ul>
+                    <li><a href="미완.html">생각의 타임라인</a></li>
+                    <li><a href="미완.html">끄적끄적</a></li>
+                    <li>미정</li>
+                </ul>
+            </details>
+        </aside>
+
+
+        <main class="content">
+            <h2>html & css 용어정리</h2>
+            <dl>
+                <h3 class="ti">
+                    <div class="qw">HTML</div>
+                    <div class="qw"><span style="color: dodgerblue;">태그</span>/
+                        <span style="color: rgb(0, 170, 0);">속성(attribute)
+                        </span>/ <span class="re">스타일(property)</span>/<span class="pu">규칙(at-rule)</span>
+                    </div>
+                </h3>
+                <dt> hr 태그</dt>
+                <dd>
+                    가로 획을 길게 그어주는 태그. 스타일로 상세 설정가능
+                </dd>
+                <br>
+                <dt>시맨틱 태그( header, nav, main, aside, article, section )</dt>
+                <dd>
+                    시맨틱 태그란 기능적 쓸모는 없지만 고유한 의미가있는 div라고 할 수 있다.
+                </dd>
+                <br>
+
+                <dt>부모video, audio 태그</dt>
+                <dd> <span>속성으로는 controls ui표시, autoplay 자동재생, loop 반복재생,
+                        muted 음소거로 시작, poster 영상시작전 표시할 썸네일 이미지, width, height</span>
+                    / video controls width="640" poster= 썸네일
+                </dd>
+                <br>
+
+                <dt> 자녀 source태그 <span>src=파일명 or 주소 type= 종류</span></dt>
+                <dd> <span>audio/mpeg(mp3), audio/ogg, video/mp4, video/mp4 타입 종류</span>
+                </dd>
+                <br>
+
+                <dt>a 태그 속성: <span>rel, target, download</span></dt>
+                <dd>traget은 링크 창을 어디에 열껀지 지정(현재창에서 이동, 새탭에서 이동) <span>_self(현재창), _blank(새창에서), _parent( iframe 사용시
+                        부모창에서), _top(가상 상위 웹에서)</span></dd><br>
+                <dd>rel은 브라우저가 어떻게 링크를 인식해야하는지 알려줌.(보안문제직결) <span>noopener 새창에서 기존창 제어 막음 (보안), noreferrer 새창에 출처주소 보내지
+                        않음, nofollow 검색엔진에서 막음</span></dd><br>
+                <dd>download 다운로드 되어지는 파일의 이름을 어떻게 저장할 것인지</dd>
+                <br>
+
+
+                <dt> iframe태그/ iframe <span>src="" <del>frameborder="0"</del> 보다는 border: none; 스타일제어</span></dt>
+                <dd>브라우저 안쪽에 브라우저를 넣는 태그. 통상 <span class="bl">a태그</span>의 <span>_parent와 _top</span>은 이 태그내에서 빠져나와 상위
+                    웹으로 링크를 여는 쓸모를 가짐.
+                </dd>
+                <br>
+
+                <dt>table 부모태그/ 자식태그 caption 표이름 thead(머릿말), tbody(본문), tfoot(합계 등), tr표 행태그/ 손자태그 th 1행내용 td 다음행</dt>
+                <dd>
+                    흔히쓰는 표만들기. tr로 감쌀때마다 1행씩 늘어남. 그 tr의 자식태그로 보통 제일 윗줄 내용설명칸을 맡음. 그후 행부턴 td사용
+                    <br>스타일로 선을 충분히 세련되게 꾸밀 수 있음. thead 등의 구분을 쓰지 않아도 기능적으로는 작동함. 그러나 스크립트와 구분할때 사용하는것이 용이함.
+                    <br><span>셀 병합 속성은 rowspan세로병합, colaspan가로병합. ex) th colspan="2" </span>/ 같이 쓰는 스타일로는 <span
+                        class="re">border, border-width, border-style(실선,점선), border-color, border-collapse(셀테두리
+                        1줄)</span>
+                </dd>
+                <br>
+
+                <dt> title태그</dt>
+                <dd>지정해둔 값에 마우스를 올렸을시 툴팁이 나옴. ex) title="이 글자가 나옵니다." <br>
+                    세련된 툴팁을 사용 하고 싶을시 <span class="re">::after와 :hover</span> 기능을 통해서 직접 스타일을 설정할 수 있음. 개념은 에프터를 통해서 박스
+                    스타일을 미리설정하여 투명도를 0으로 설정하여 보이지 않게 설정. 그 후 호버시 투명도를 1로 설정하여 전시.
+                </dd>
+                <br>
+
+                <dt><span class="re"> 속성 선택자 표적방법</span></dt>
+                <dd>태그의 속성설정이 되었을때 특정 속성이 적용된 태그만 표적적용. <span class="bl">a href="내 사진.png"</span> 태그를 표적시</dd>
+                <dd class="grid2">
+                    <div class="정렬1">[속성] : 태그[속성]인 모두를 표적</div>
+                    <div class="정렬2">a[href]</div>
+
+                    <div class="정렬1">[속성="값"] : 속성값을 넣은 태그를 정확히 표적</div>
+                    <div class="정렬2">a[href="내 사진.png"]</div>
+
+                    <div class="정렬1">[속성^="값"] : 값으로 시작하는 태그를 표적</div>
+                    <div class="정렬2">a[href^="내 사진"]</div>
+
+                    <div class="정렬1">[속성$="값"] : 값으로 끝나는 태그를 표적</div>
+                    <div class="정렬2">a[href=".png"]</div>
+
+                    <div class="정렬1">[속성*="값"] : 값이 포함된 모두를 표적</div>
+                    <div class="정렬2">a[href="pn"]</div>
+
+                    <div class="정렬1">[속성~="값"] : 값이 독립적 사용된곳을 표적</div>
+                    <div class="정렬2">a[href="사진.png"]</div>
+                </dd>
+                <br>
+
+                <dt><span class="re">가상 클래스 선택자 :hover, :active, :focus, nth-child(n)</span></dt>
+                <dd><span class="re">hover:</span> 마우스를 올렸을때 사용. color 와 textdecoration 혹은 scale을 주로 같이 사용.</dd>
+                <dd><span class="re">active:</span> 마우스로 클릭하고있을떄. scale을 주로 매칭</dd>
+                <dd><span class="re">focus:</span> 클릭이나 탭키로 활성화 되었을때. 통상 outline: none 후에 border-color로 강조</dd>
+                <dd><span class="re">nth-child(n):</span> 같은 부모안에서 n자리에 들어가는 자식 선택. n설정으로는 2: 2번째 자식, 2n: 2번째 자식마다,
+                    odd/even: 홀수/짝수 </dd>
+                <br>
+
+                <dt>우선순위 !important > 인라인 > ID > Class > 태그 선택자</dt>
+                <dd>css상 color: red !important;(스타일에서 주요도) > span style="color: red;"(인라인 직접 설정) > #id > .class > main
+                </dd>
+                <br>
+
+                <dt><span class="re">inherit; 부모의 속성 상속받기</span></dt>
+                <dd>부모로 부터 상속받지 않는 백그라운컬러, 보더 등과같은 박스단위를 꾸며주는 속성을 border: inherit; 으로 부모의 보더값을 받아옴.</dd>
+                <br>
+
+                <dt><span class="re">box-sizing: content-box; / border-box;</span></dt>
+                <dd><span class="re">content-box;</span> 는 표준 요소. 즉 너비 높이의 설정이 콘텐츠박스 설정 후 보더값 패딩값 마진값 추가 적용</dd>
+                <dd><span class="re">border-box;</span> 는 사용자 설정. 마진까지 포함한 최종값을 결정. 마진값과 패딩값을 빼고 남은부분이 컨텐츠</dd>
+                <br>
+
+                <dt><span class="re">position의 사용법</span></dt>
+                <dd><span class="re">static;</span> 기본상태</dd>
+                <dd><span class="re">relative;</span> 기준잡기 및 위치이동 보통 부모에 적용하여 자식의 기준점역할</dd>
+                <dd><span class="re">absolute;</span> 기준으로부터 정밀한 위치 조절. 주로 툴팁등에 사용</dd>
+                <dd><span class="re">fixed;</span> 상단 및 하단 고정에 사용. 맨위로 버튼 주로사용</dd>
+                <dd><span class="re">sticky;</span> 반고정상태. 부모영역에서만 고정되어 따라오다 부모의 박스영역에서 벗어날시 안따라옴.</dd>
+                <br>
+
+                <dt><span class="re">플렉스 부모 사용 속성</span></dt>
+                <dd>flex-direction(정렬축 결정) : row(가로정렬: 기본값), column(세로정렬)</dd>
+                <dd>flex-wrap(줄바꿈) : nowrap(줄바꿈 없음 오버플로우: 기본값), wrap(너비 넘어갈시 자동 줄바꿈 허용)</dd>
+                <dd>flex-flow(통합버전): direction, wrap</dd>
+
+                <dd>justify-content(주축 정렬) : flex-start, flex-end, center, space-between, space-around, space-evenly
+                </dd>
+                <dd>align-items(교차축 정렬): flex-start, flex-end, center, baseline, stretch(기본값)</dd>
+                <dd>align-content(여러줄 교차축 정렬): flex-start, flex-end, center, space-between, space-around, stretch(기본값)
+                </dd>
+                <br>
+
+                <dt><span class="re">플렉스 자식속성</span></dt>
+                <dd>flex-grow: 0 초기값. 남는 공간을 비율대로 분배</dd>
+                <dd>flex-shrink: 1 초기값. 부족시 줄어드는 비율</dd>
+                <dd>flex-basis: 길이px 크기설정 그로우와 슈린크의 연산기준값. auto설정시 height와 width의 값으로 됨. 연산은 적용</dd>
+                <dd>flex: grow shrink basis;</dd>
+                <dd>align-self: auto, flex-start, flex-end, center, baseline, stretch</dd>
+                <dd>order: 아이템의 순서 재배열. 주로 모바일 및 특정환경에서 구조순서를 바꿀때 사용.</dd>
+                <br>
+
+                <dt><span class="re">그리드 부모속성</span></dt>
+                <dd>grid-template-columns(열 너비): 200px 1fr 200px
+                <dd>grid-template-rows(행 너비): auto 100px
+                <dd>(영역설정): "nav main aside"
+                <dd>grid-template (행 열 통합설정): rows / columns
+
+                <dd>grid-auto-columns(열 자동생성시 크기): 100px</dd>
+                <dd>grid-auto-rows(행 자동생성시 크기): 100px</dd>
+                <dd>grid-auto-flow(자동생성 방향): rows, column, dense(빈공간시 사이로 들어감)</dd>
+                <dd>gap/ row-gap, column-gap (행열 간격설정): 20px</dd>
+
+                <dd>justify-content: start, center, end, space-between</dd>
+                <dd>align-content: star, center, end, stretch</dd>
+                <dd>justify-item: star, center, end, stretch</dd>
+                <dd>align-item: star, center, end, stretch</dd>
+                <br>
+
+                <dt><span class="re">그리드 자식 속성</span></dt>
+                <dd>grid-column(열 지정):1/3(1번선에서 3번선까지 2칸먹기) , span2(2칸먹기) </dd>
+                <dd>grid-row(행 지정):1/3(1번선에서 3번선까지 2칸먹기) , span2(2칸먹기)</dd>
+                <dd>grid-area(이름설정/ 좌표설정): row-start, col-start, row-end, col-end/ 이름설정 </dd>
+                <dd>justify-self: star, center, end, stretch</dd>
+                <dd>ailgn-self: star, center, end, stretch</dd>
+                <dd>place-self(통합형): align, justify</dd>
+                <br>
+
+                <dt><span class="re">:target 과 :checked</span></dt>
+                <dd>타겟은 html기본기능인 id 섹션으로 이동했을때 효과를 주는 기능</dd>
+                <dd>체크드는 체크박스나 라디오에서 체크가 되었을시 효과를 주는 기능</dd>
+                <br>
+
+                <dt><span class="re">transition 사용법</span></dt>
+                <dd>변화에 자연스러움을 줄 수 있는 속성. transition: 속성 지속시간 타이밍 지연시간;<br>
+                    지속시간: 변화에 몇초 걸릴지 0.3s등. <br>
+                    타이밍: 가속도설정 ease(기본값 천-빠-천) linear(등속) ease-in(천천히시작) ease-out(천천히끝) eaes-in-out(천빠천 더 부드럽) </dd>
+                <br>
+
+                <dt>meta : 메타데이터 / 웹페이지를 어떻게 해석하여 보여주면 좋을지 알려줌</dt>
+                <dd>meta charset="UTF-8" : 이페이지의 인코딩 방식을 UTF-8로 하겠다는뜻. 기본값.<br>
+                    meta name="viewport" content="width=device-width, initial-scale=1.0" : 이태그는 뷰포트(보이는 영역) 설정용이다의뜻, 너비는
+                    디바이스너비, 최초 스케일은 100퍼비율
+                    <br>ㄴ 사실상 모바일 대응용으로 사용하며 이제는 서두에 기본적으로 들어가 줘야하는 부분.
+                </dd>
+                <br>
+
+                <dt><span class="pu">@media 반응형 웹사이트 / 브레이크 포인트</span></dt>
+                <dd> 미디어는 통상 모바일 혹은 태블릿과같은 디스플레이가 pc보다 비교적 작은곳에서 웹사이트를 이용 할 때 가독성을 높이기 위해 사용되는 규칙이다. </dd>
+                <dd> 같이 사용되는 속성으로는 max-width, min-width를 주로사용. 최대넓이와 최소넓이를 설정하여, 조건부로 해석.
+                <br> ex) max-width: 800px / 최대 넓이가 800px일때= 800px보다 적은 넓이 값에서~ 로 해석</dd>
+                <br><dd>브레이크 포인트란, 디바이스 종류에 따른 통상적인 변경점.
+                <br>모바일: max-width:480 or 576px, 태블릿: min-width 768px, 데스크탑: min-width: 1024 or 1200px 울트라와이드: min-width 1440px이상</dd>
+                <br>
+
+                <dt></dt>
+                <dd></dd>
+                <br>
+
+                <dt></dt>
+                <dd></dd>
+                <br>
+
+                <dt></dt>
+                <dd></dd>
+                <br>
+
+                <dt></dt>
+                <dd></dd>
+                <br>
+
+        </main>
+
+        <aside class="rightbar">
+            광고도 받을만한 사이트를 만들겠다는 당찬 포부
+        </aside>
+    </div>
+    <footer>
+        <span class="ggg">AAA</span><span class="ggg">BBB</span><span class="ggg">CCC</span>
+        <span class="ggg">DDD</span><span class="ggg">EEE</span><span class="ggg">FFF</span>
+        <span class="GGGG">GGG</span>
+    </footer>
+
+</body>
+
+</html>

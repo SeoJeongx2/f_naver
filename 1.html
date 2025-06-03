@@ -2,7 +2,8 @@
 <html lang="ko">
 
 <head>
-    <meta="UTF-8">
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>정호의 연습노트</title>
         <link rel="stylesheet" href="style.css">
 </head><!-- 3단 레이아웃 구조로 만들기 -->
@@ -54,7 +55,7 @@
 
 
         <main class="content">
-            <h2>HTNL/CSS</h2> <!-- 메인의 게시글 눌렀을때 아래로 간략하게 설명이 펼쳐지는 형식-->
+            <h2>HTML/CSS</h2> <a href="용어정리.html"> html & css 태그 속성 정리</a><!-- 메인의 게시글 눌렀을때 아래로 간략하게 설명이 펼쳐지는 형식-->
             <ol>
                 <details>
                     <summary>HTML 기본적인 구조</summary>
@@ -167,6 +168,7 @@
                     }
                     디스플레이가 열린상태일때 우리가 넣은 아이콘이 90도 돌아가도록 설정추가.
                     23:56 2025-05-25
+                    
 -----------------------------------------------------------------------------------------------------------------------
             
                     추가적으로 ::before 이라는 가상요소를 공부하면서 새로운 방법 추가.
@@ -279,22 +281,68 @@ table 	   표를 만들어서 보여줘야 할때 사용.  자체적으로 thead
                     <summary>플렉스 구조와 그리드 구조.</summary>
                     <h2>플렉스 구조와 그리드 구조.</h2>
 
-                    <pre>웹사이트라는 도화지를 기준으로 원하는 비율 혹은 픽셀값으로 구역을 나누게 되는데 그렇게 나눠진 구역에 맞춰 내가 입력한 결과물이 낑겨들어가면 그리드.
-                    플렉스는 조금더 단순하게 원하는 비율 혹은 픽셀값으로 입력할 결과물이 늘어나고 작아진 상태로 웹에 나타나는것이 플렉스.
-                    그리드는 세부적인 공간설정으로 세세한 위치를 잡는다면, 플렉스는 단순이 펼치고 쌓고의 작업을 직관적으로 할 수 있음. 따라서 섞어서 사용했을때 좋다고 생각함.
-                    
-                    
-                    	      배너
-                    ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ                                이러한 레이아웃 구조에선 상단 배너와
-                    어ㅣ      메      ㅣ 광
-                    사ㅣ               ㅣ            ← 메인 그리드         중간 그리드 구조           grid-template-areas: "leftbar content rightbar"( 먼저 각 클래스 에어리어 설정 선행)
-                    이ㅣ      인      ㅣ 고
-                    드ㅣ               ㅣ                                       푸터를 플렉스로 세로정렬.  display: flex; , flex-direction: column;
-                    ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ                                 
-                               푸터                                             
-                    
-                    02:01 2025-05-28
-                    
+<pre>웹사이트라는 도화지를 기준으로 원하는 비율 혹은 픽셀값으로 구역을 나누게 되는데 그렇게 나눠진 구역에 맞춰 내가 입력한 결과물이 낑겨들어가면 그리드.
+플렉스는 조금더 단순하게 원하는 비율 혹은 픽셀값으로 입력할 결과물이 늘어나고 작아진 상태로 웹에 나타나는것이 플렉스.
+그리드는 세부적인 공간설정으로 세세한 위치를 잡는다면, 플렉스는 단순이 펼치고 쌓고의 작업을 직관적으로 할 수 있음. 따라서 섞어서 사용했을때 좋다고 생각함.
+
+
+	      배너
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ                                이러한 레이아웃 구조에선 상단 배너와
+어ㅣ      메      ㅣ 광
+사ㅣ               ㅣ            ← 메인 그리드         중간 그리드 구조           grid-template-areas: "leftbar content rightbar"( 먼저 각 클래스 에어리어 설정 선행)
+이ㅣ      인      ㅣ 고
+드ㅣ               ㅣ                                       푸터를 플렉스로 세로정렬.  display: flex; , flex-direction: column;
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ                                 
+           푸터                                             
+
+02:01 2025-05-28
+
+
+플렉스 부모 사용 속성
+flex-direction(정렬축 결정) : row(가로정렬: 기본값), column(세로정렬)
+flex-wrap(줄바꿈) : nowrap(줄바꿈 없음 오버플로우: 기본값), wrap(너비 넘어갈시 자동 줄바꿈 허용)
+flex-flow(통합버전): direction, wrap
+
+justify-content(주축 정렬) : flex-start, flex-end, center, space-between, space-around, space-evenly
+align-items(교차축 정렬): flex-start, flex-end, center, baseline, stretch(기본값)
+align-content(여러줄 교차축 정렬): flex-start, flex-end, center, space-between, space-around, stretch(기본값)
+
+플렉스 자식 속성
+flex-grow: 0 초기값. 여분 공간을 비율대로 분배
+flex-shrink: 1 초기값. 부족시 줄어드는 비율
+flex-basis: 길이px 크기설정 그로우와 슈린크의 연산기준값. auto설정시 height와 width의 값으로 됨. 연산은 적용
+flex: grow shrink basis;
+align-self: auto, flex-start, flex-end, center, baseline, stretch
+order: 아이템의 순서 재배열. 주로 모바일 및 특정환경에서 구조순서를 바꿀때 사용.
+
+
+그리드 부모 속성
+grid-template-columns(열 너비): 200px 1fr 200px
+grid-template-rows(행 너비): auto 100px	
+grid-template-areas(영역설정): "nav main aside"
+grid-template (행 열 통합설정): rows / columns
+
+grid-auto-columns(열 자동생성시 크기): 100px
+grid-auto-rows(행 자동생성시 크기): 100px
+grid-auto-flow(자동생성 방향): rows(기본값), column, dense(빈공간시 사이로 들어감)
+gap/ row-gap, column-gap (행열 간격설정): 20px
+
+justify-content: start, center, end, space-between
+align-content: star, center, end, stretch
+justify-item: star, center, end, stretch
+align-item: star, center, end, stretch
+
+그리드 자식 속성
+grid-column(열 지정):1/3(1번선에서 3번선까지 2칸먹기) , span2(2칸먹기) 
+grid-row(행 지정):1/3(1번선에서 3번선까지 2칸먹기) , span2(2칸먹기)
+grid-area(이름설정/ 좌표설정): row-start, col-start, row-end, col-end/ 이름설정 
+justify-self: star, center, end, stretch
+ailgn-self: star, center, end, stretch
+place-self(통합형): align, justify
+
+00:23 2025-06-03
+
+
                     </pre>
                 </details>
 
@@ -329,13 +377,23 @@ table 	   표를 만들어서 보여줘야 할때 사용.  자체적으로 thead
                            border-left: 2px solid #ccc    ← 볼더를 통한 간편한 선 생성. 단 선의 정밀한 위치와 길이 컨트롤 힘듬.
                         }
                         01:49 2025-05-28
+                        
                         </pre>
 
                 </details>
 
                 <details>
-                    <summary>-</summary>
-                    <p>내용</p>
+                    <summary>트랜지션과 애니메이션 차이</summary>
+                    <p>
+트랜지션은 기본적으로 어떠한 트리거 즉 조건으로 시작. 가령 호버나 액션, 포커스일때 어떤 변화값을 조절하는 속성이라면,
+
+<br>애니메이션의 경우 설계자의 의도에따라 지연시작, 바로시작, 등 트리거 없이 움직이는 값을 설정한대로 실행시킬 수 있음. 
++@keyframes 을 연동하여 정확한 좌표값으로 세세한 설정이 가능 
+
+<br>@keyframes 이름 : 키프레임의 이름 설정과 애니메이션의 모양 위치 스타일등의 시각적인 설정을 하는곳
+<br>animation: 어떻게 움직일 것인지?를 세세히 설정하는것 가령, 지속시간 반복횟수 방향 가속도 등등..
+-name: 사용할 키프레임 네임 타깃
+<br>19:11 2025-06-03</p>
                 </details>
 
                 <details>
