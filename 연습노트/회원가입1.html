@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                background-color: rgb(241, 243, 241);
+                min-height: 100vh;
+            }
+
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+
+            .로고 {
+                display: flex;
+                justify-content: center;
+            }
+
+            .로고 img {
+                width: 400px;
+                height: 250px;
+            }
+
+            main {
+                display: flex;
+                justify-content: center;
+                background-color: rgb(210, 216, 210);
+
+
+            }
+
+            .box {
+                border: 3px solid #ccc;
+                border-radius: 40px;
+                padding: 100px 100px 100px;
+                background-color: rgb(248, 248, 248);
+            }
+
+            .약관 {
+                border: 2px solid #ccc;
+                border-radius: 5px;
+                margin: 5px 0px 50px;
+                font-size: 12px;
+                color: #555555;
+                width: 500px;
+                height: 70px;
+                padding: 0 15px 15px;
+                overflow: auto;
+            }
+
+            input[type=checkbox] {
+                display: inline;
+            }
+
+            .box label {
+                display: inline;
+                width: 400px;
+            }
+
+            input[type=checkbox]+span {
+                font-size: 17px;
+                color: #555555;
+            }
+
+            .필수 {
+                color: rgb(9, 170, 92);
+                font-weight: 500;
+            }
+
+            #필수약관1:checked ~ #필수약관2:checked ~ .제출1 label {
+                display: none;
+                cursor: pointer;
+            }
+
+            #필수약관1:checked ~ #필수약관2:checked ~ .제출2 label {
+                display: flex;
+            }
+
+            .체크 {
+                font-size: 20px;
+            }
+
+            .제출1 input,.제출2 input {
+                display: none;
+            }
+
+            .제출1 label {
+                display: flex;
+                background-color: #ccc;
+                color: #fff;
+                margin-top: 40px;
+                width: 532px;
+                height: 70px;
+                font-size: 35px;
+                justify-content: center;
+                align-items: center;
+                border: 3px solid #ccc;
+                border-radius: 10px;
+            }
+
+            .제출2 label {
+                display: none;
+                background-color: rgb(9, 170, 92);
+                color: #fff;
+                margin-top: 40px;
+                width: 532px;
+                height: 70px;
+                font-size: 35px;
+                justify-content: center;
+                align-items: center;
+                border: 3px solid #ccc;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+
+            footer {
+                display: flex;
+                justify-content: center;
+                margin-top: 7px;
+                gap: 15px;
+                border-top: 2px solid #ccc;
+                margin-top: 200px;
+            }
+
+            footer span {
+                position: relative;
+            }
+
+            footer span:not(:first-child)::before {
+                position: absolute;
+                content: "";
+                width: 2px;
+                left: -8px;
+                top: 25%;
+                bottom: 25%;
+                background-color: #ccc;
+            }
+        </style>
+</head>
+
+<body>
+    <header class="로고">
+        <a href="index.html"><img src="연습노트로고2.PNG" alt="정호의 연습노트"></a>
+    </header>
+
+    <main>
+        <div class="box">
+            <input type="checkbox" id="필수약관1"><label for="필수약관1"><span><span class="필수">[필수]</span> 연습장 이용약관</span></label>
+
+            <div class="약관">
+                <h3>환영합니다.</h3>
+                <p> 지금부터는 정호의 영역입니다. 허튼짓하지 마시고 그냥 잘 둘러보다 갈 수 있도록 하세요. 아시겠어요?
+                    <br>00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+                    <br>000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+                    <br>00000000000000000000000000000000000000000000000000000000000000000000000
+                    <br>00000000000000000000000000000000000000000000000000000000000000000000000000000000
+                    <br>000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+                    <br>00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+            </div>
+
+            <input type="checkbox" id="필수약관2">
+            <label for="필수약관2">
+                <span><span class="필수">[필수]</span> 개인정보 수집 및 이용</span>
+            </label>
+
+            <div class="약관">
+                <p> 개인정보 다 제껍니다.
+                </p>
+            </div>
+
+            <input type="checkbox" id="선택약관1">
+            <label for="선택약관1">
+                <span><span class="선택">[선택]</span> 위치기반 서비스 이용약관</span>
+            </label>
+
+            <div class="약관">
+                <p> 어디사는지 내가 좀 알아야겠어요.
+                </p>
+            </div>
+
+            <input type="checkbox" id="선택약관2">
+            <label for="선택약관2">
+                <span><span class="선택">[선택]</span> 그냥 체크 하세요.</span>
+            </label>
+
+            <div class="약관">
+                <p> 약관이 3개면 너무 짜치네요.
+                </p>
+            </div>
+
+            <span class="제출1">
+                <a href="회원가입1.html" class="gray">
+                    <label>
+                        <input type="submit">다 음
+                    </label>
+                </a>
+
+            </span>
+
+            <span class="제출2">
+                <a href="회원가입2.html" class="green">
+                    <label>
+                        <input type="submit">다 음
+                    </label>
+                </a>
+
+            </span>
+
+        </div>
+
+
+
+
+    </main>
+    <footer>
+        <span class="ggg">AAA</span><span class="ggg">BBB</span><span class="ggg">CCC</span>
+        <span class="ggg">DDD</span><span class="ggg">EEE</span><span class="ggg">FFF</span>
+        <span class="GGGG">GGG</span>
+    </footer>
+    </div>
+</body>
+
+</html>
