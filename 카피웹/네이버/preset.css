@@ -1,0 +1,227 @@
+.bor-5 {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.bor-10 {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.bor-10-L {
+    border: 1px solid #ccc;
+    border-radius: 10px 0 0 10px;
+}
+
+.bor-10-R {
+    border: 1px solid #ccc;
+    border-radius: 0 10px 10px 0;
+}
+
+.bor-15 {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+.bor-20 {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.bor-20-L {
+    border: 1px solid #ccc;
+    border-radius: 20px 0 0 20px;
+}
+
+.bor-20-R {
+    border: 1px solid #ccc;
+    border-radius: 0 20px 20px 0;
+}
+
+.bor-40 {
+    border: 1px solid #ccc;
+    border-radius: 40px;
+}
+
+.bor-45 {
+    border: 1px solid #ccc;
+    border-radius: 45px;
+}
+
+.bor-50 {
+    border: 1px solid #ccc;
+    border-radius: 50px;
+}
+
+
+.bor-0 {
+    border: none;
+    border-radius: 100px;
+}
+
+
+
+
+
+
+
+
+
+.bg-red {
+    background-color: red;
+}
+
+.bg-blue {
+    background-color: blue;
+}
+
+.bg-green {
+    background-color: green;
+}
+
+.bg-gray {
+    background-color: gray;
+}
+
+
+
+
+
+
+
+.mg-l30 {
+    margin-left: 30px;
+}
+
+.mg-t16 {
+    margin-top: 16px;
+}
+
+
+
+
+
+
+
+.dp-ib {
+    display: inline-block;
+}
+
+.dp-fx {
+    display: flex;
+}
+
+.w-center {
+    justify-content: center;
+}
+
+.h-center {
+    align-items: center;
+}
+
+.in-pl::placeholder {
+    color: #ddd;
+}
+
+
+
+
+
+
+
+.ADX {
+    width: 42px;
+    height: 16px;
+}
+
+.RL {
+    position: relative;
+}
+
+.RL::after {
+    position: absolute;
+    content: "";
+    background-color: #a0a0a0;
+    right: 0;
+    top: 20%;
+    bottom: 5%;
+    width: 1px;
+}
+
+
+
+.LH {
+    position: relative;
+}
+
+.LH::before {
+    position: absolute;
+    content: "•";
+    color: #a3a3a3;
+    left: -6px;
+}
+
+.LH-2 {
+    position: relative;
+}
+
+.LH-2::before {
+    position: absolute;
+    content: "•";
+    color: #a3a3a3;
+    left: -10px;
+}
+
+
+
+
+
+.RP-4 {
+    padding-right: 4px;
+}
+
+.RP-9 {
+    padding-right: 9px;
+}
+
+.LP-4 {
+    padding-left: 4px;
+}
+
+
+
+
+.title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.sub {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.sub-2 {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+
+
+
+
+
+
+
+/*         아직 더 연구가 필요함 
+.ic-sizw {
+    --ic-width: 32px;
+    --ic-height: 32px;
+    width: var(--ic-width);
+    height: var(--ic-height);
+}
+
+:root {
+    --ic-width: 32px;
+    --ic-height: 32px;
+} */

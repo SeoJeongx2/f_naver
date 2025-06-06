@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>정호의 연습노트</title>
     <link rel="stylesheet" href="style.css">
-</head><!-- 3단 레이아웃 구조로 만들기 -->
+    <style>
+        
+    </style>
+</head>
 
-<body>
+<body><!-- 3단 레이아웃 구조로 만들기 -->
     <div class="로회">
         <a href="로그인.html" class="로그인">로그인</a><a href="회원가입1.html">회원가입</a>
     </div>
@@ -259,23 +262,24 @@ table 	   표를 만들어서 보여줘야 할때 사용.  자체적으로 thead
 
                 <details>
                     <summary>부자관계와 형제 관계</summary>
-                    <h2><strong>부자관계와 형제 관계</strong></h2>
-                    <p>형제관계는 형:조건 + 동생 {형이 조건 했을때 동생이 {}한다.}
-                        <br>ex) input[type="checkbox"]:checked +label 혹은 input[type="checkbox"]:not(:checked) + label
-                        <br>(+동생1+동생2와 같이 여러개의 동생이 붙었을때는 제일 마지막 동생2만 수식이 된다.)
-                        <br>형제관계에서 ~를 썼을때는 뒤에오는 태그들중 같은태그를 전부 수식한다. ~p경우 &lt;p&gt; &lt;br&gt; &lt;p&gt; 이중 p만을 수식, ~*는
-                        모든태그 수식
-                        <br>부자관계는 부모:has(자식태그:조건){자식이 조건 했을때 부모가 {}한다.} ex) label:has(input:checked)
-                    </p>
+<pre><h2><strong>부자관계와 형제 관계</strong></h2>
+형제관계는 형:조건 + 동생 {형이 조건 했을때 동생이 {}한다.} 		ex) input[type="checkbox"]:checked +label 혹은 input[type="checkbox"]:not(:checked) + label
+(+동생1+동생2와 같이 여러개의 동생이 붙었을때는 제일 마지막 동생2만 수식이 된다.)
+형제관계에서 ~를 썼을때는 뒤에오는 태그들중 같은태그를 전부 수식한다. ~p경우 이중 p만을 수식 &lt;p&gt; &lt;br&gt; &lt;/p&gt;
 
-                    <p>인풋과 라벨을 통해 형제, 부자관계를 자세히 배움.
-                        형제는 인풋이 먼저등장 후 다음에 나오는 라벨이 for속성을 통해 인풋의 id를 직접 지정하는구조.
-                        <br>부자는 인풋과 텍스트를 라벨로 감쌌을때 라벨은 부모, 인풋은 자식구조가 됨.
-                        <br><del> has를 형제구조에도 사용 하는 방법으로는 형제를 div로 묶음하여 div와 2자식구조로 변환 후 div:has(input:조건)으로 사용하는방법.
-                        </del> 라고 생각했으나
-                        <br>이렇게 할 경우 인풋이 체크가 되었을때 라벨이 변화하는것이 아닌, 묶음 박스가 변화하는구조 따라서 옳지 못한 사용
-                        <br>따라서 관계에 따른 적절한 태그를 사용하는것이 직관적이고, 수정하기 쉬운 코드를 짤 수 있음.00:24 2025-05-25
-                    </p>
+부자관계는 부모:has(자식태그:조건){자식이 조건 했을때 부모가 {}한다.}	  ex) label:has(input:checked)
+ 또한 부자 관계에서 자식을 한정할때, 부모 > 자식태그:not(:first-child){ 부모의 자식 태그 중 첫번째 자식을 제외하고 {}한다. }             ex) .left-section > div:not(:first-child)
+
+인풋과 라벨을 통해 형제, 부자관계를 자세히 배움. 
+형제는 인풋이 먼저등장 후 다음에 나오는 라벨이 for속성을 통해 인풋의 id를 직접 지정하는구조.
+부자는 인풋과 텍스트를 라벨로 감쌌을때 라벨은 부모, 인풋은 자식구조가 됨.
+<del> has를 형제구조에도 사용 하는 방법으로는 형제를 div로 묶음하여 div와 2자식구조로 변환 후 div:has(input:조건)으로 사용하는방법. </del> 라고 생각했으나
+이렇게 할 경우 인풋이 체크가 되었을때 라벨이 변화하는것이 아닌, 묶음 박스가 변화하는구조 따라서 옳지 못한 사용
+ 
+따라서 관계에 따른 적절한 태그를 사용하는것이 직관적이고, 수정하기 쉬운 코드를 짤 수 있음.
+00:24 2025-05-25
+00:46 2025-06-05
+</pre>
                 </details>
 
                 <details>
@@ -480,4 +484,4 @@ var(--변수명, 없을시 사용(black)): 변수사용법
 
 </body>
 
-</html>
+</html><!--  -->

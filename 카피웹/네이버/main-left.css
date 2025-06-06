@@ -1,0 +1,286 @@
+        
+        
+        .left-section {
+            display: inline-block;
+            width: 830px;
+            height: 100%;
+        }
+
+        .left-section_ad {
+            display: flex;
+            width: 100%;
+            height: 130px;
+            position: relative;
+        }
+
+        .left-section_ad a {
+            display: flex;
+            align-items: center;
+            width: 810px;
+            height: 100%;
+        }
+
+        .일상공감-우산 {
+            width: 195px;
+            height: 100%;
+        }
+
+        .일상공감-로고 {
+            width: 72px;
+            height: 72px;
+            margin: 0 17px;
+        }
+
+        .일상공감-문구 {
+            flex: 1;
+        }
+
+        .일상공감-더알아보기 {
+            width: 135px;
+        }
+
+        .더알아보기 {
+            text-align: center;
+            border: 1px solid rgb(47, 77, 70);
+            border-radius: 50px;
+            background-color: rgb(47, 77, 70);
+            color: white;
+            padding: 14px 15px;
+            font-size: 15px;
+        }
+
+        .ADX {
+            position: absolute;
+            display: flex;
+            font-size: 11px;
+            right: 8px;
+            top: 5px;
+        }
+
+
+
+
+
+
+        .left-section_news {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 426px;
+        }
+
+        .left-section_news-list {
+            height: 58px;
+        }
+
+        .left-section_news-list ul {
+            display: flex;
+            list-style: none;
+            font-size: 18px;
+            color: #7a7a7a;
+            padding: 18px 20px;
+            margin: 0;
+        }
+
+        .left-section_news-list ul li {
+            padding-right: 26px;
+            position: relative;
+        }
+
+        .left-section_news-list ul li:not(:last-child)::after {
+            position: absolute;
+            content: "";
+            width: 1px;
+            right: 13px;
+            top: 7px;
+            height: 15px;
+            background-color: #ccc;
+            transform: rotate(20deg);
+        }
+
+        .left-section_news-header {
+            display: flex;
+            justify-content: space-between;
+            height: 50px;
+            margin: 0 20px;
+            background-color: #ebebeb;
+        }
+
+        .left-section_news-header ul {
+            margin: 0;
+            padding: 12px 20px;
+            display: flex;
+            list-style: none;
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        .left-section_news-header ul li {
+            padding-right: 19px;
+            position: relative;
+        }
+
+        .left-section_news-header ul li:not(:last-child)::after {
+            position: absolute;
+            content: "•";
+            color: #a3a3a3;
+            right: 7px;
+        }
+
+        .엔터홈{
+            padding: 12px 20px;
+            font-weight: 450;
+        }
+
+
+
+        .left-section_news-main {
+            display: flex;
+            flex: 1;
+            margin: 18px 20px;
+        }
+
+        .left-section_news-main_left {
+            display: flex;
+            flex-direction: column;
+            margin-right: 20px;
+        }
+
+        .left-section_news-main_left-1 {
+            display: flex;
+            align-items: center;
+            width: 385px;
+            height: 104px;
+        }
+
+        .left-section_news-main_left-1 .rap {
+            overflow: hidden;
+            flex-shrink: 0;
+            width: 185px;
+            height: 104px;
+            padding: 0 0;
+            margin-right: 16px;
+            border-radius: 5px;
+            
+        }
+
+        .left-section_news-main_left-1 img {
+            width: 185px;
+            height: 104px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            display: block;
+        }
+
+        .left-section_news-main_left-1 img:hover {
+            transform: scale(1.1);
+        }
+
+        .left-section_news-main_left-2 {
+            display: flex;
+            align-items: center;
+            width: 385px;
+            height: 104px;
+            margin-top: 16px;
+        }
+        
+        .left-section_news-main_left-2 .rap {
+            overflow: hidden;
+            flex-shrink: 0;
+            width: 185px;
+            height: 104px;
+            padding: 0 0;
+            margin-right: 16px;
+            border-radius: 5px;
+            
+        }
+
+        .left-section_news-main_left-2 img {
+            width: 185px;
+            height: 104px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            display: block;
+        }
+
+        .left-section_news-main_left-2 img:hover {
+            transform: scale(1.1);
+        }
+
+        .left-section_news-main_right {
+            flex: 1;
+
+        }
+
+        .left-section_news-main_right ul {
+            list-style: none;
+            margin: 9px 0 0;
+            font-size: 15px;
+            padding: 0;
+        }
+
+        .left-section_news-main_right ul li {
+            display: flex;
+            justify-content: space-between;
+            padding-right: 42px;
+        }
+
+        .left-section_news-main_right ul li:not(:last-child) {
+            margin-bottom: 17px;
+        }
+
+
+
+
+
+        .left-section_news-footer {
+            display: flex;
+            height: 58px;
+            border-top: 1px solid #ccc;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .left-section_news-footer_L-button {
+            height: 36px;
+            width: 36px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+
+        .left-section_news-footer_L-button:hover {
+            cursor: pointer;
+            background-color: #eee;
+        }
+
+        .left-section_news-footer_text {
+            padding: 0 18px;
+        }
+            
+        .left-section_news-footer_R-button {
+            height: 36px;
+            width: 36px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+
+        .left-section_news-footer_R-button:hover {
+            cursor: pointer;
+            background-color: #eee;
+        }
+
+        .left-section_shopping {
+            width: 100%;
+            height: 560px;
+        }
+
+        .left-section_content {
+            width: 100%;
+            height: 1040px;
+        }
+
+        .left-section>div:not(:first-child) {
+            margin-top: 16px;
+        }
