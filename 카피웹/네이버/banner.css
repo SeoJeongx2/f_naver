@@ -100,29 +100,5 @@
 
         .search-bar_right a  {
             margin-left: 15px;
-            position: relative;
-        }
-
-        .검색 {
-            position: absolute;
-            top: 60px;
-            right: 200px;
-        }
-
-        .채팅 {
-            position: absolute;
-            top: 0px;
-            right: 34px;
-        }
-
-        .알림 {
-            position: absolute;
-            top: 0px;
-            right: 44px;
-        }
-
-        .장바구니 {
-            position: absolute;
-            top: -38px;
-            right: 0px;
+            
         }

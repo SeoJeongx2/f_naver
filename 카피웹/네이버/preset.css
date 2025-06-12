@@ -85,6 +85,16 @@
     background-color: gray;
 }
 
+
+
+
+
+
+.tx-c-g {
+    color: #03c75a;
+    font-weight: bold;
+}
+
 .tx-c-p {
     color: #9858f5;
 }
@@ -92,12 +102,25 @@
 .tx-c-y {
     color: #ebaa00;
 }
+.tx-c-r {
+    color: #cd3534;
+}
+.tx-c-b {
+    color: #3172e7;
+}
+.tx-c-s {
+    color: #32a1ff;
+}
+
 
 .mg-l6 {
     margin-left: 6px;
 }
 .mg-l16 {
     margin-left: 16px;
+}
+.mg-l24 {
+    margin-left: 24px;
 }
 
 .mg-l30 {
@@ -108,12 +131,49 @@
     margin-top: 16px;
 }
 
+.mg-t7 {
+    margin-top: 7px;
+}
+
+.mg-t6 {
+    margin-top: 6px;
+}
+
+.mg--t1 {
+    margin-top: -1px;
+}
+
+.mg-b3 {
+    margin-bottom: 3px;
+}
+
 .mg-b4 {
     margin-bottom: 4px;
 }
 
 .mg-b10 {
     margin-bottom: 10px;
+}
+
+.mg-auto {
+    margin-top: auto;
+}
+
+.graph {
+    position: absolute;
+    background-image: url(img/그래프.png);
+    width: 172px;
+    height: 80px;
+    left: -73px;
+    top: 35px;
+    z-index: 1;
+}
+
+
+
+
+.po-re {
+    position: relative;
 }
 
 
@@ -135,7 +195,15 @@
 .h-center {
     align-items: center;
     align-self: center;
+}
 
+.full {
+    width: 100%;
+    height: 100%;
+}
+
+.flex1 {
+    flex: 1;
 }
 
 .in-pl::placeholder {
@@ -229,6 +297,15 @@
     padding-right: 4px;
 }
 
+.RP-5 {
+    padding-right: 5px;
+}
+
+.RP-7 {
+    padding-right: 7px;
+}
+
+
 .RP-9 {
     padding-right: 9px;
 }
@@ -285,6 +362,34 @@
 }
 
 
+.img-sz8 {
+    width: 64px;
+    height: 64px;
+    border: 1px solid #eee;
+    border-radius: 50px;
+}
+
+.img-sz9 {
+    width: 26px;
+    height: 26px;
+    border: 1px solid #eee;
+    border-radius: 50px;
+}
+
+.img-sz11 {
+    width: 86px;
+    height: 86px;
+}
+
+.img-sz10 {
+    width: 90px;
+    height: 90px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #a3a3a3;
+}
+
+
 .title {
     font-size: 18px;
     font-weight: 500;
@@ -295,9 +400,18 @@
     font-weight: 600;
 }
 
+.title-3 {
+    font-size: 42px;
+}
+
 .sub {
     font-size: 16px;
     font-weight: 400;
+}
+
+.sub-1 {
+    font-size: 15px;
+    font-weight: 300;
 }
 
 .sub-2 {
@@ -309,6 +423,20 @@
     font-size: 13px;
     font-weight: 300;
 }
+.sub-1-1 {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.sub-2-1 {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.sub-3-1 {
+    font-size: 13px;
+    font-weight: 500;
+}
 
 .tx-a {
     text-align: center;
@@ -318,6 +446,146 @@
 
 
 
+
+
+
+.happy1 {
+    background-image: url(img/back.png);
+    background-size: 463px 442px;
+    background-position: -258px -316px;
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin: 1px 4px 0 0;
+    margin-right: 4px;
+    
+}
+
+
+.vt-al {
+    vertical-align: center;
+}
+
+
+
+.hover-pointer:hover {
+    cursor: pointer;
+
+}
+
+
+.popup-g {
+    box-sizing: border-box;
+    position: absolute;
+    color: #fff;
+    background-color: #03c75a;
+    padding: 0 8px;
+    border: none;
+    border-radius: 12.6px;
+    font-size: 12px;
+    line-height: 24px;
+    top: 0px;
+    left: 31px;
+    min-width: 24px;
+}
+
+.popup-g2 {
+    box-sizing: border-box;
+    position: absolute;
+    color: #fff;
+    background-color: #03c75a;
+    padding: 0 8px;
+    border: none;
+    border-radius: 12.6px;
+    font-size: 12px;
+    line-height: 24px;
+    top: 0px;
+    left: 142px;
+    min-width: 24px;
+}
+
+
+
+
+
+
+
+
+.img-coverA {
+    position: absolute;
+    width: 90px;
+    height: 30px;
+    background-color: rgba(99, 99, 99, 0.6);
+    bottom: 0;
+    text-align: center;
+    display: none;
+    font-weight: 700;
+    color: #fff;
+}
+
+.tran-05 {
+    transition: 0.3s ease;
+}
+
+.img-coverB:hover  .img-coverA {
+    display: block;
+}
+
+.img-coverB:hover img {
+    scale: 1.2;
+}
+
+.of-hidden {
+    overflow: hidden;
+
+}
+
+
+
+
+
+
+
+
+
+
+.width-90 {
+    width: 90px;
+}
+.height-16 {
+    height: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.filter {
+    filter: brightness(95%) grayscale(10%);
+}
+
+
+
+.reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 
 
 /*         아직 더 연구가 필요함 
