@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="banner.css">
     <link rel="stylesheet" href="main-left.css">
     <link rel="stylesheet" href="main-right.css">
+    <link rel="stylesheet" href="footer.css">
     
     <style>
 
@@ -25,10 +26,27 @@
             text-decoration: underline;
         }
 
+        body::after {
+            position: fixed;
+            content: "HTML/CSS로 짜여진\A Fake web 입니다";
+            text-align: center;
+            color: rgba(0, 0, 0, 0.2);
+            top: 50%;
+            right: 50%;
+            transform: translate(70%, -50%) rotate(-30deg);
+            font-size: 60px;
+            z-index: 9999;
+            pointer-events: none;
+            white-space: pre-line;
+
+
+        }
+
     </style>
 </head>
 <body>
     <header class="banner">
+        <div class="banner-1">
         <div class="search-bar_left">
             <a href="" class="네이버 로고"><img src="img/현충일 로고.png" alt="네이버 로고">
             </a>
@@ -39,6 +57,7 @@
         </div>
         <div class="search-bar_main">
             <label class="search-bar"><input type="text" class="in-pl" placeholder="검색어를 입력해주세요."></label>
+            <a href="" class="검색"><img src="img/키돋.png" alt="키보드 돋보기"></a>
             <div class="search-bar_bottom-menu">
                 <a href="" class="메일"><img src="img/메일.png" alt="메뉴 아이콘"><div>메일</div></a>
                 <a href="" class="카페"><img src="img/카페.png" alt="메뉴 아이콘"><div>카페</div></a>
@@ -56,15 +75,16 @@
             </div>
         </div>
         <div class="search-bar_right">
-            <a href="" class="검색"><img src="img/키돋.png" alt="키보드 돋보기"></a>
             <a href="" class="채팅"><img src="img/채팅.png" alt="채팅"></a>
             <a href="" class="알림"><img src="img/알림.png" alt="알림"></a>
             <a href="" class="장바구니"><img src="img/장바구니.png" alt="장바구니"></a>
+        </div>
         </div>
     </header>
 
 
     <main class="">
+        <div class="main-1">
         <section class="left-section">
             <div class="left-section_ad bor-10"> <!-- 첫번째 광고 섹션 -->
                 <a href="">
@@ -315,7 +335,7 @@
                     <div class="left-section_content_bcook">
                         <div class="left-section_content_bcook-1">
                             <a  href="" class="left-section_content_bcook-1_img ">    
-                                <img class="img-sz5 mg-b10" src="img/큰음식1.jpg" alt="큰음식"></img>
+                                <div class="of-hidden mg-b10 img-sz5"><img class="img-sz5  img-coverC" src="img/큰음식1.jpg" alt="큰음식"></img></div>
                             </a>
                             <a href="" class="">
                                 <div class="sub-2 mg-b4 tx-c-y">레시피 집중탐구</div>
@@ -325,7 +345,7 @@
                         </div>
                         <div class="left-section_content_bcook-1">
                             <a  href="" class="left-section_content_bcook-1_img ">    
-                                <img class="img-sz5 mg-b10" src="img/큰음식2.jpg" alt="큰음식"></img>
+                                <div class="of-hidden mg-b10 img-sz5"><img class="img-sz5  img-coverC" src="img/큰음식2.jpg" alt="큰음식"></img></div>
                             </a>
                             <a href="" class="">
                                 <div class="sub-2 mg-b4 tx-c-y">푸드스토리</div>
@@ -335,7 +355,7 @@
                         </div>
                         <div class="left-section_content_bcook-1">
                             <a  href="" class="left-section_content_bcook-1_img ">    
-                                <img class="img-sz5 mg-b10" src="img/큰음식3.jpg" alt="큰음식"></img>
+                                <div class="of-hidden mg-b10 img-sz5"><img class="img-sz5  img-coverC" src="img/큰음식3.jpg" alt="큰음식"></img></div>
                             </a>
                             <a href="" class="">
                                 <div class="sub-2 mg-b4 tx-c-y">오늘의 푸드TV</div>
@@ -349,7 +369,7 @@
                         <ul>
                             <li>
                                 <a class="img-sz4" href="">
-                                    <img class="img-sz4" src="img/음식1.png" alt="">
+                                    <div class="of-hidden img-sz4"><img class="img-sz4 img-coverC" src="img/음식1.png" alt=""></div>
                                 </a>
                                 <div class="mg-l16 ">
                                     <a class="sub-2 dp-bk">다이어트 양배추 요리 참치<br>양배추 볶음 덮밥으로 만들기</a>
@@ -360,7 +380,7 @@
                             </li>
                             <li>
                                 <a class="img-sz4" href="">
-                                    <img class="img-sz4" src="img/음식22.jfif" alt="">
+                                    <div class="of-hidden img-sz4"><img class="img-sz4 img-coverC" src="img/음식22.jfif" alt=""></div>
                                 </a>
                                 <div class="mg-l16 ">
                                     <a class="sub-2 dp-bk">라이스페이퍼 새우튀김 만들기 <br>소스만드는법 냉동새우튀김</a>
@@ -371,7 +391,7 @@
                             </li>
                             <li>
                                 <a class="img-sz4" href="">
-                                    <img class="img-sz4" src="img/음식33.jfif" alt="">
+                                    <div class="of-hidden img-sz4"><img class="img-sz4 img-coverC" src="img/음식33.jfif" alt=""></div>
                                 </a>
                                 <div class="mg-l16 ">
                                     <a class="sub-2 dp-bk">매운콩나물무침 만드는 법 빨간<br>콩나물무침 레시피 콩나물...</a>
@@ -382,7 +402,7 @@
                             </li>
                             <li>
                                 <a class="img-sz4" href="">
-                                    <img class="img-sz4" src="img/음식44.jpg" alt="">
+                                    <div class="of-hidden img-sz4"><img class="img-sz4 img-coverC" src="img/음식44.jpg" alt=""></div>
                                 </a>
                                 <div class="mg-l16 ">
                                     <a class="sub-2 dp-bk">이제 은우가 돌아갈 집은...<br>산불 피해로 교회에서...</a>
@@ -393,7 +413,7 @@
                             </li>
                             <li>
                                 <a class="img-sz4" href="">
-                                    <img class="img-sz4" src="img/음식55.jfif" alt="">
+                                    <div class="of-hidden img-sz4"><img class="img-sz4 img-coverC" src="img/음식55.jfif" alt=""></div>
                                 </a>
                                 <div class="mg-l16 ">
                                     <a class="sub-2 dp-bk">청포묵무침 레시피 묵무침양념<br>청포묵 김무침 만드는 법</a>
@@ -404,7 +424,7 @@
                             </li>
                             <li>
                                 <a class="img-sz4" href="">
-                                    <img class="img-sz4" src="img/음식66.jfif" alt="">
+                                    <div class="of-hidden img-sz4"><img class="img-sz4 img-coverC" src="img/음식66.jfif" alt=""></div>
                                 </a>
                                 <div class="mg-l16 ">
                                     <a class="sub-2 dp-bk">크래미 샌드위치 만드는<br>샌드위치 오이 맛살 무침</a>
@@ -415,7 +435,7 @@
                             </li>
                             <li>
                                 <a class="img-sz4" href="">
-                                    <img class="img-sz4" src="img/음식77.jfif" alt="">
+                                    <div class="of-hidden img-sz4"><img class="img-sz4 img-coverC" src="img/음식77.jfif" alt=""></div>
                                 </a>
                                 <div class="mg-l16 ">
                                     <a class="sub-2 dp-bk">일본 오니기리 만들기 명란밥 도<br>시락 명란 마요네즈 명란...</a>
@@ -426,7 +446,7 @@
                             </li>
                             <li>
                                 <a class="img-sz4" href="">
-                                    <img class="img-sz4" src="img/음식88.jfif" alt="">
+                                    <div class="of-hidden img-sz4"><img class="img-sz4 img-coverC" src="img/음식88.jfif" alt=""></div>
                                 </a>
                                 <div class="mg-l16 ">
                                     <a class="sub-2 dp-bk">냉동 새우튀김 만들기 라이스<br>페이퍼 새우튀김 만능치즈소스...</a>
@@ -443,7 +463,7 @@
                         <div class="left-section_content_recipe-2">
                             <div class="left-section_content_bcook-1">
                                 <a  href="" class="left-section_content_bcook-1_img ">    
-                                    <img class="img-sz7 mg-b10" src="img/레시피11.jfif" alt="음식"></img>
+                                    <div class="of-hidden img-sz7 mg-b10"><img class="img-sz7 img-coverC" src="img/레시피11.jfif" alt="음식"></img></div>
                                 </a>
                                 <a href="" class="">
                                     <div class="sub-3 mg-b4 tx-c-y">#아이간식</div>
@@ -453,7 +473,7 @@
                             </div>
                             <div class="left-section_content_bcook-1">
                                 <a  href="" class="left-section_content_bcook-1_img ">    
-                                    <img class="img-sz7 mg-b10" src="img/레시피22.jfif" alt="음식"></img>
+                                    <div class="of-hidden img-sz7 mg-b10"><img class="img-sz7 img-coverC" src="img/레시피22.jfif" alt="음식"></img></div>
                                 </a>
                                 <a href="" class="">
                                     <div class="sub-3 mg-b4 tx-c-y">#미역국종류</div>
@@ -463,7 +483,7 @@
                             </div>
                             <div class="left-section_content_bcook-1">
                                 <a  href="" class="left-section_content_bcook-1_img ">    
-                                    <img class="img-sz7 mg-b10" src="img/레시피33.jfif" alt="음식"></img>
+                                    <div class="of-hidden img-sz7 mg-b10"><img class="img-sz7 img-coverC" src="img/레시피33.jfif" alt="음식"></img></div>
                                 </a>
                                 <a href="" class="">
                                     <div class="sub-3 mg-b4 tx-c-y">#제철반찬</div>
@@ -473,7 +493,7 @@
                             </div>
                             <div class="left-section_content_bcook-1">
                                 <a  href="" class="left-section_content_bcook-1_img ">    
-                                    <img class="img-sz7 mg-b10" src="img/레시피44.jfif" alt="음식"></img>
+                                    <div class="of-hidden img-sz7 mg-b10"><img class="img-sz7 img-coverC" src="img/레시피44.jfif" alt="음식"></img></div>
                                 </a>
                                 <a href="" class="">
                                     <div class="sub-3 mg-b4 tx-c-y">#간장소불고기</div>
@@ -494,7 +514,7 @@
                     <ul>
                         <li>
                             <a class="img-sz4" href="">
-                                <img class="img-sz4" src="img/음식광고11.jfif" alt="">
+                                <div class="of-hidden img-sz4"><img class="img-sz4 img-coverC" src="img/음식광고11.jfif"></div>
                             </a>
                             <div class="mg-l16 ">
                                 <a class="sub-2 dp-bk">연예인들도 무조건 산다는 코스<br>트코 초강추템 3가지</a>
@@ -505,7 +525,7 @@
                         </li>
                         <li>
                             <a class="img-sz4" href="">
-                                <img class="img-sz4" src="img/음식광고22.jfif" alt="">
+                                <div class="of-hidden img-sz4"><img class="img-sz4 img-coverC" src="img/음식광고22.jfif"></div>
                             </a>
                             <div class="mg-l16 ">
                                 <a class="sub-2 dp-bk">승무원도 산다는 다이소 추천템<br>BEST 3</a>
@@ -516,7 +536,7 @@
                         </li>
                         <li>
                             <a class="img-sz4" href="">
-                                <img class="img-sz4" src="img/음식광고33.png" alt="">
+                                <div class="of-hidden img-sz4"><img class="img-sz4 img-coverC" src="img/음식광고33.png"></div>
                             </a>
                             <div class="mg-l16 ">
                                 <a class="sub-2 dp-bk">이런 집은 절대 부자가 될 수 없<br>습니다</a>
@@ -527,7 +547,7 @@
                         </li>
                         <li>
                             <a class="img-sz4" href="">
-                                <img class="img-sz4" src="img/음식광고44.jpg" alt="">
+                                <div class="of-hidden img-sz4"><img class="img-sz4 img-coverC" src="img/음식광고44.jpg"></div>
                             </a>
                             <div class="mg-l16 ">
                                 <a class="sub-2 dp-bk">나는 누구와 결혼하게 될...<br>결혼가능성 TEST ></a>
@@ -538,7 +558,7 @@
                         </li>
                         <li>
                             <a class="img-sz4" href="">
-                                <img class="img-sz4" src="img/음식광고55.png" alt="">
+                                <div class="of-hidden img-sz4"><img class="img-sz4 img-coverC" src="img/음식광고55.png"></div>
                             </a>
                             <div class="mg-l16 ">
                                 <a class="sub-2 dp-bk">더워지면 이거 못 살걸요? 입고<br>즉시 품절되는 다이소 여름 필...</a>
@@ -549,7 +569,7 @@
                         </li>
                         <li>
                             <a class="img-sz4" href="">
-                                <img class="img-sz4" src="img/음식광고66.jfif" alt="">
+                                <div class="of-hidden img-sz4"><img class="img-sz4 img-coverC" src="img/음식광고66.jfif"></div>
                             </a>
                             <div class="mg-l16 ">
                                 <a class="sub-2 dp-bk">계랑 그냥 보관하면 금방 상해요!<br>내돈내산 살림템으로 바꾼...</a>
@@ -560,7 +580,7 @@
                         </li>
                         <li>
                             <a class="img-sz4" href="">
-                                <img class="img-sz4" src="img/음식광고77.png" alt="">
+                                <div class="of-hidden img-sz4"><img class="img-sz4 img-coverC" src="img/음식광고77.png"></div>
                             </a>
                             <div class="mg-l16 ">
                                 <a class="sub-2 dp-bk">나만 몰랐던 다이소 행주 꿀템,<br>대체 왜 이렇게 인기지?</a>
@@ -571,7 +591,7 @@
                         </li>
                         <li>
                             <a class="img-sz4" href="">
-                                <img class="img-sz4" src="img/음식광고88.jfif" alt="">
+                                <div class="of-hidden img-sz4"><img class="img-sz4 img-coverC" src="img/음식광고88.jfif"></div>
                             </a>
                             <div class="mg-l16 ">
                                 <a class="sub-2 dp-bk">지퍼백 안사요! 빨래할때도<br>이거 재활용</a>
@@ -785,37 +805,333 @@
             <div class="right-section_stock-market bor-10">
                 <div class="right-section_stock-market_content-area">
                     <div class="right-section_stock-market_content-area-header">
-                        <a class="title dp-ib RP-7" href="">증시</a><div class="dp-ib right-section_stock-market_content-area-header-2">i</div><span>06,13,03:03</span>
+                        <a class="title dp-ib RP-7" href="">증시</a><div class="dp-ib right-section_stock-market_content-area-header-2">i</div><span>06.13 03:03</span>
                     </div>
 
                     <div class="right-section_stock-market_content-area-main">
-                        <div class="right-section_stock-market_content-area-main-L">
+                        <div class="right-section_stock-market_content-area-main-L-slider">
+                            <div class="right-section_stock-market_content-area-main-L-slide">
+                                <div class="right-section_stock-market_content-area-main-L">
+                                    <div class="title-4">나스닥</div>
+                                    <div class="title-6">19,406.83</div>
+                                    <div class="right-section_stock-market_content-area-main-L-3 title-5 tx-c-b"><span class="blue1"></span>255.66 -1.30%</div>
+                                    <img class="img-sz12 mg-t10" src="img/주식2.png" alt="그래프">
+                                </div>
+                                <div class="right-section_stock-market_content-area-main-L">
+                                    <div class="title-4">다우존스</div>
+                                    <div class="title-6">42,197.79</div>
+                                    <div class="right-section_stock-market_content-area-main-L-3 title-5 tx-c-b"><span class="blue1"></span>769.83 -1.79%</div>
+                                    <img class="img-sz12 mg-t10" src="img/주식1.png" alt="그래프">
+                                </div>
+                                <div class="right-section_stock-market_content-area-main-L">
+                                    <div class="title-4">환율 USD</div>
+                                    <div class="title-6">1,367.80</div>
+                                    <div class="right-section_stock-market_content-area-main-L-3 title-5 tx-c-r"><span class="red1"></span>11.40 +0.84%</div>
+                                    <img class="img-sz12 mg-t10" src="img/주식3.png" alt="그래프">
+                                </div>
+                                <div class="right-section_stock-market_content-area-main-L">
+                                    <div class="title-4">나스닥</div>
+                                    <div class="title-6">19,406.83</div>
+                                    <div class="right-section_stock-market_content-area-main-L-3 title-5 tx-c-b"><span class="blue1"></span>255.66 -1.30%</div>
+                                    <img class="img-sz12 mg-t10" src="img/주식2.png" alt="그래프">
+                                </div>
+                            </div>
                         </div>
 
                         <div class="right-section_stock-market_content-area-main-R">
-                            <a class="" href="">
-                            </a>
+                            <div class="right-section_stock-market_content-area-main-R-1" >관심 종목이 없습니다.<br>새로운 종목을 추가해 보세요!</div>
+                            <a class="right-section_stock-market_content-area-main-R-2" href=""></a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="right-section_ad4 bor-10"></div>
-            <div class="right-section_widget bor-10"></div>
-            <div class="right-section_ad5 bor-10"></div>
-        </section>
 
+
+
+
+            <div class="right-section_ad4 bor-10">
+                <div class="right-section_ad4_content-area">
+                    <div class="right-section_ad4_content-area-header">
+                        <a class="title dp-ib" href="">미트리</a><div class="dp-ib right-section_ad4_content-area-header-2">NEW</div>
+                    </div>
+                    <div class="right-section_ad4_content-area-main">
+                        <div class="right-section_ad4_content-area-main-L">
+                            <a class="" href="">
+                                <img class="img-sz13 mg-r6" src="img/미트리.jpg" alt="">
+                            </a>
+                        </div>    
+                        <a class="right-section_ad4_content-area-main-R" href="">
+                            <div class="right-section_ad4_content-area-main-R-1 title-2">미트리 맜있는볶음밥 얼리썸머<br> 역대급 행사 최대 52%할인 + 무료배송까지</div>
+                            <div class="right-section_ad4_content-area-main-R-2">COUPON 3,000원 할인</div>
+                        </a>
+                        
+                        <div class="right-section_ad4_content-area-main-R"></div>
+                    </div>
+                    <a class="right-section_ad4_content-area-more dp-bk" href="">바로가기</a>
+                    <div class="right-section_ad4_content-area-footer mg-t6">스토어의 최근 혜택 정보입니다</div>
+                </div>
+            </div>
+            
+            
+
+
+
+
+
+            <div class="right-section_widget bor-10">
+                <div class="right-section_widgetbox">
+                    <div class="right-section_widget-top title-2">위젯 보드</div>
+                    <div class="right-section_widget-main">
+                        <div class="right-section_widget-main_section1">
+                            <div class="right-section_widget-main_section1-L">
+                                <div class="">캘린더</div>
+                                <div class="mg-t6"><span class="title-7">6.15</span> <span class="sub-3">일</span></div>
+                                <div class="sub-1 mg-t10">일정이 없습니다.</div>
+                            </div>
+                            <div class="right-section_widget-main_section1-R">
+                                <div class="right-section_widget-main_section1-R-1"></div>
+                                <table class="sub-2">
+                                    <thead>
+                                        <tr>
+                                            <th><span>일</span></th>
+                                            <th>월</th>
+                                            <th>화</th>
+                                            <th>수</th>
+                                            <th>목</th>
+                                            <th>금</th>
+                                            <th>토</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="holiday">1</span></td>
+                                            <td>2</td>
+                                            <td><span class="holiday">3</span></td>
+                                            <td>4</td>
+                                            <td>5</td>
+                                            <td><span class="holiday">6</span></td>
+                                            <td>7</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="holiday">8</span></td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                            <td>12</td>
+                                            <td>13</td>
+                                            <td>14</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="holiday" id="d-day">15</span></td>
+                                            <td>16</td>
+                                            <td>17</td>
+                                            <td>18</td>
+                                            <td>19</td>
+                                            <td>20</td>
+                                            <td>21</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="holiday">22</span></td>
+                                            <td>23</td>
+                                            <td>24</td>
+                                            <td>25</td>
+                                            <td>26</td>
+                                            <td>27</td>
+                                            <td>28</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="holiday">29</span></td>
+                                            <td>30</td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                            <td>5</td>
+                                        </tr>
+                                    </tbody>
+                                </table>                                
+                            </div>
+                        </div>
+                        <div class="right-section_widget-main_section2">
+                            <div class="right-section_widget-main_section2-box">
+                                <div class="right-section_widget-main_section2_header"><span>VIBE 예술가의 이야기</span><span>다른 추천 보기</span></div>
+                                <div class="dp-fx right-section_widget-main_section2_main">
+                                    <ul class="reset dp-fx">
+                                        <li class="reset">
+                                            <a class="po-re" href="">
+                                                <div class="of-hidden img-sz14 mg-t10"><img src="img/인물1.jpg" alt=""></div>
+                                                <div class="dp-fx right-section_widget-main_section2_main_img-cover">예술가는 가난<br>해도 되나요?</div>
+                                                <div class="right-section_widget-main_section2_main_img-cover-2"></div>
+                                            </a>
+                                        </li>
+                                        <li class="reset">
+                                            <a class="po-re" href="">
+                                                <div class="of-hidden img-sz14 mg-t10"><img src="img/인물2.jpg" alt=""></div>
+                                                <div class="dp-fx right-section_widget-main_section2_main_img-cover">친구의 기준을<br>낮춰야하는 이유는?</div>
+                                                <div class="right-section_widget-main_section2_main_img-cover-2"></div>
+                                            </a>
+                                        </li>
+                                        <li class="reset">
+                                            <a class="po-re" href="">
+                                                <div class="of-hidden img-sz14 mg-t10"><img src="img/인물3.jpg" alt=""></div>
+                                                <div class="dp-fx right-section_widget-main_section2_main_img-cover">그건 게임일 뿐,<br>인생에 실패한건 아니잖아요?</div>
+                                                <div class="right-section_widget-main_section2_main_img-cover-2"></div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="right-section_widget-footer title-2-1" href="">모바일 네이버 메인 열기</a>
+                </div>
+            </div>
+            <div class="right-section_ad5 bor-10">
+                <div class="right-section_ad5_slider">
+                    <div class="right-section_ad5_box">
+                        <a class="right-section_ad5_box_main dp-fx " href="">
+                            <div class="mg-r6"><img class="img-sz15" src="img/스매시.png" alt=""></div>
+                            <div class="">
+                                <div class="title-2">스매시만큼 시원한 적립</div>
+                                <div class="sub-2">장소 클립 찍고 최대 2만포인트</div>
+                            </div>
+                        </a>
+                        <a class="right-section_ad5_box_main dp-fx " href="">
+                            <div class="mg-r6"><img class="img-sz15" src="img/포인트.png" alt=""></div>
+                            <div class="">
+                                <div class="title-2">네플스앱 목표 달성하면 최대 1만원 적립</div>
+                                <div class="sub-2">포인트 적립, 상세내용 확인하기</div>
+                            </div>
+                        </a>
+                        <a class="right-section_ad5_box_main dp-fx " href="">
+                            <div class="mg-r6"><img class="img-sz15" src="img/스매시.png" alt=""></div>
+                            <div class="">
+                                <div class="title-2">스매시만큼 시원한 적립</div>
+                                <div class="sub-2">장소 클립 찍고 최대 2만포인트</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="right-section_ad5_light dp-fx">
+                    <div class="right-section_ad5_light1"></div>
+                    <div class="right-section_ad5_light2"></div>
+                </div>
+            </div>
+        </section>
+        </div>
 
 
     </main>
 
 
-    <footer class="bg-gray bor-5">
+    <footer>
         <div class="main-footer">
-            <div class="f-top"></div>
-            <div class="f-middle-1"></div>
-            <div class="f-middle-2"></div>
-            <div class="f-bottom"></div>
+            <div class="f-top">
+                <ul class="reset">
+                    <li class="reset" >
+                        <a class="dp-fx" href="">
+                            <div class="of-hidden img-sz16"><img class="img-sz16 img-coverC" src="img/푸터광고.jpg" alt=""></div>
+                            <div class="f-top_content-right">
+                                <div class="f-top_content-right-1">초록우산</div>
+                                <div class="mg-t10 sub-2-1 f-top_content-right-2">사랑을 기다리는 쌍둥이 돕기</div>
+                                <div class="mg-t6 sub-2">악취가 새어 나오는<br>쓰레기장 같던 집에서 발견됐어요</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="reset" >
+                        <a class="dp-fx" href="">
+                            <div class="of-hidden img-sz16"><img class="img-sz16 img-coverC" src="img/푸터광고2.png" alt=""></div>
+                            <div class="f-top_content-right">
+                                <div class="f-top_content-right-1">굿피플</div>
+                                <div class="mg-t10 sub-2-1 f-top_content-right-2">생리대 후원하기</div>
+                                <div class="mg-t6 sub-2">월 1만원이면 사라지는<br>저소득층 소녀들의 걱정</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="reset" >
+                        <a class="dp-fx" href="">
+                            <div class="of-hidden img-sz16"><img class="img-sz16 img-coverC" src="img/푸터광고4.png" alt=""></div>
+                            <div class="f-top_content-right">
+                                <div class="f-top_content-right-1">네이버커넥트재단</div>
+                                <div class="mg-t10 sub-2-1 f-top_content-right-2">자료구조 핵심 개념 학습</div>
+                                <div class="mg-t6 sub-2">실무에 적용되는 설계 인사이트<br>자바로 코딩하며 익히기</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="f-middle-1">
+                <a href="">
+                    <div class="f-middle-1-1 sub-1-1 underline">공지사항</div>
+                    <div class="f-middle-1-2 sub-1-1 underline">서비스 전체보기</div>
+                </a>
+            </div>
+            <div class="f-middle-2">
+                <div class="f-middle-2-1">
+                    <div class="f-middle-2-1-t">
+                        <div class="f-middle-2-1-t-header">Partners</div>
+                        <a href="">
+                            <span>프로젝트 꽃</span>
+                            <span>네이버 비즈니스</span>
+                            <span>네이버 비즈니스 스쿨</span>
+                            <span>네이버 광고</span>
+                            <span>스토어 개설</span>
+                            <span>지역업체 등록</span>
+                            <span>엑스퍼트 등록</span>
+                        </a>
+                    </div>
+                    <div class="f-middle-2-1-t mg-t10">
+                        <div class="f-middle-2-1-t-header">Developers</div>
+                        <a href="">
+                            <span>네이버 개발자 센터</span>
+                            <span>오픈 API</span>
+                            <span>오픈소스</span>
+                            <span>네이버 D2</span>
+                            <span>네이버 D2SF</span>
+                            <span>네이버 랩스</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="f-middle-2-2 dp-fx">
+                    <div class="f-middle-2-2-L dp-fx">
+                        <a href="">
+                            <div class="">
+                                <div class="sub-1-1 ">웨일 브라우저</div>
+                                <div class="f-middle-2-2-L-2 sub-1">이용안내</div>
+                            </div>
+                        </a>
+                        <div class=""><img class="img-sz17 mg-l11" src="img/웨일.png" alt=""></div>
+                    </div>
+                    <div class="f-middle-2-2-L dp-fx mg-l30">
+                        <a href="">
+                            <div class="">
+                                <div class="sub-1-1 ">기업 사이트</div>
+                                <div class="f-middle-2-2-L-2 sub-1">이용안내</div>
+                            </div>
+                        </a>
+                        <div class=""><img class="img-sz17 mg-l11" src="img/흑네이버.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="f-bottom">
+                <a class="" href="">
+                    <div class="f-bottom_content">
+                        <span>회사소개</span>
+                        <span>인재채용</span>
+                        <span>제휴제안</span>
+                        <span>이용약관</span>
+                        <span>개인정보처리방침</span>
+                        <span>청소년보호정책</span>
+                        <span>네이버 정책</span>
+                        <span>고객센터</span>
+                    </div>
+                    <span class="mg-l30">
+                        <div class="underline">ⓒ NAVER Corp.</div>
+                    </span>
+                </a>
+            </div>
         </div>
     </footer>
 </body>
