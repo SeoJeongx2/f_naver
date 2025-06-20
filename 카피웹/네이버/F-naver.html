@@ -26,6 +26,11 @@
             text-decoration: underline;
         }
 
+        .body-wrap {
+            min-width: 1340px;
+            overflow-x: hidden;
+        }
+
         body::after {
             position: fixed;
             content: "HTML/CSS로 짜여진\A Fake web 입니다";
@@ -33,18 +38,26 @@
             color: rgba(0, 0, 0, 0.2);
             top: 50%;
             right: 50%;
-            transform: translate(70%, -50%) rotate(-30deg);
+            transform: translate(50%, -50%) rotate(-30deg);
             font-size: 60px;
             z-index: 9999;
             pointer-events: none;
             white-space: pre-line;
-
-
         }
 
-    </style>
+/* 
+        .ad_premium_area {
+            position: absolute;
+            top: -235px;
+            width: 1920px;
+            min-height: 760px;
+
+        }
+ */
+</style>
 </head>
 <body>
+    <div class="body-wrap">
     <header class="banner">
         <div class="banner-1">
         <div class="search-bar_left">
@@ -84,6 +97,7 @@
 
 
     <main class="">
+        <div id="ad_premium_area" class="ad_premium_area" style="min-width:1920px"> </div>
         <div class="main-1">
         <section class="left-section">
             <div class="left-section_ad bor-10"> <!-- 첫번째 광고 섹션 -->
@@ -100,64 +114,69 @@
             </div>
 
             <div class="left-section_news bor-10">
-                <div class="left-section_news-list">
-                    <ul>
-                        <li><span>뉴스스탠드</span> · <span>언론사편집</span></li>
-                        <li>엔터</li>
-                        <li>스포츠</li>
-                        <li>경제</li>
-                        <li>쇼핑투데이</li>
-                    </ul>
-                </div>
-
-                <div class="left-section_news-header">
-                    <ul>
-                        <li>드라마</li>
-                        <li>영화</li>
-                        <li>뮤직</li>
-                        <li>연애</li>
-                        <li>네이버TV</li>
-                        <li>연재</li>
-                    </ul>
-                    <div class="엔터홈">엔터홈</div>
-                </div>
-
-                <div class="left-section_news-main">
-                    <div class="left-section_news-main_left">    
-                        <div class="left-section_news-main_left-1">
-                            <div class="rap">
-                                <img class="bor-5" src="img/엔터_사진1.jpg" >
-                            </div>
-                            <div class="h-center">
-                                <a href="" class="" >'다슈 모델' 김종석, 갑작스러운 사망…지인들 추모 ...</a>
-                                <div class="sub-2"><span class="RP-9">스포티비뉴스</span><span class="LH">4시간 전</span></div>
-                            </div>
+                <input type="radio" id="list-1" name="left-section_news-list">
+                <input type="radio" id="list-2" name="left-section_news-list" checked>
+                <input type="radio" id="list-3" name="left-section_news-list">
+                <input type="radio" id="list-4" name="left-section_news-list">
+                <input type="radio" id="list-5" name="left-section_news-list">
+                <label for="list-1" class="list-1 list-0"><span>뉴스스탠드</span> · <span>언론사편집</span></label>
+                <label for="list-2" class="list-2 list-0">엔터</label>
+                <label for="list-3" class="list-3 list-0">스포츠</label>
+                <label for="list-4" class="list-4 list-0">경제</label>
+                <label for="list-5" class="list-5 ">쇼핑투데이</label>
+                <div class="left-section_new_content-box-2">
+                    <div class="left-section_news-header">
+                        <ul>
+                            <li>드라마</li>
+                            <li>영화</li>
+                            <li>뮤직</li>
+                            <li>연애</li>
+                            <li>네이버TV</li>
+                            <li>연재</li>
+                        </ul>
+                        <div class="엔터홈">엔터홈</div>
+                    </div>
+                   
+                    <div class=".left-section_news-main">
+                        <div class="left-section_news-main-1">
+                            <div class="left-section_news-main-1_left">    
+                                <div class="left-section_news-main-1_left-1">
+                                    <div class="rap">
+                                        <img class="bor-5" src="img/엔터_사진1.jpg" >
+                                    </div>
+                                    <div class="h-center">
+                                        <a href="" class="" >'다슈 모델' 김종석, 갑작스러운 사망…지인들 추모 ...</a>
+                                        <div class="sub-2"><span class="RP-9">스포티비뉴스</span><span class="LH">4시간 전</span></div>
+                                    </div>
+                                </div>
+                                <div class="left-section_news-main-1_left-2">
+                                    <div class="rap">
+                                        <img class="bor-5" src="img/엔터_사진2.jpg" >
+                                    </div>
+                                    <div class="h-center">
+                                        <a href="" class="" >"곧 워터밤서 만나요" 효민 핫한 비키니 볼륨감 보니...</a>
+                                        <div class="sub-2"><span class="RP-9">스타뉴스</span><span class="LH">2시간 전</span></div>
+                                    </div>
+                                </div>
+                            </div>    
+                            <div class="left-section_news-main-1_right">
+                                    <ul>
+                                        <li><a href="" class="RP-9">박태환, 어마어마한 섭취량 "아침에 식빵"...</a><span class="LH-2 sub-2">앳스타일</span></li>
+                                        <li><a href="" class="RP-9" >지드래곤, 이주연과 계속괸 열애설...</span></a><span class="LH-2 sub-2">월간스포츠</span></li>
+                                        <li><a href="" class="RP-9" >"처음으로 주인공 대접" 이상민, 미모의...</span></a><span class="LH-2 sub-2">스포츠동아</span></li>
+                                        <li><a href="" class="RP-9" >배우 김갑수, 현충일 추념식 내레이션......</span></a><span class="LH-2 sub-2">스포츠경향</span></li>
+                                        <li><a href="" class="RP-9" >박진주-미주 빠진 '놀뭐', 커피 심부름은...</span></a><span class="LH-2 sub-2">앳스타일</span></li>
+                                        <li><a href="" class="RP-9" >"피해자 184명" 최악의 연쇄 성폭행범...</span></a><span class="LH-2 sub-2">SBS연애뉴스</span></li>
+                                    </ul>
+                            </div>  
                         </div>
-                        <div class="left-section_news-main_left-2">
-                            <div class="rap">
-                                <img class="bor-5" src="img/엔터_사진2.jpg" >
-                            </div>
-                            <div class="h-center">
-                                <a href="" class="" >"곧 워터밤서 만나요" 효민 핫한 비키니 볼륨감 보니...</a>
-                                <div class="sub-2"><span class="RP-9">스타뉴스</span><span class="LH">2시간 전</span></div>
-                            </div>
-                        </div>
-                    </div>    
-                    <div class="left-section_news-main_right">
-                            <ul>
-                                <li><a href="" class="RP-9">박태환, 어마어마한 섭취량 "아침에 식빵"...</a><span class="LH-2 sub-2">앳스타일</span></li>
-                                <li><a href="" class="RP-9" >지드래곤, 이주연과 계속괸 열애설...</span></a><span class="LH-2 sub-2">월간스포츠</span></li>
-                                <li><a href="" class="RP-9" >"처음으로 주인공 대접" 이상민, 미모의...</span></a><span class="LH-2 sub-2">스포츠동아</span></li>
-                                <li><a href="" class="RP-9" >배우 김갑수, 현충일 추념식 내레이션......</span></a><span class="LH-2 sub-2">스포츠경향</span></li>
-                                <li><a href="" class="RP-9" >박진주-미주 빠진 '놀뭐', 커피 심부름은...</span></a><span class="LH-2 sub-2">앳스타일</span></li>
-                                <li><a href="" class="RP-9" >"피해자 184명" 최악의 연쇄 성폭행범...</span></a><span class="LH-2 sub-2">SBS연애뉴스</span></li>
-                            </ul>
-                    </div>  
-                </div>
-                <div class="left-section_news-footer">
-                    <button class="left-section_news-footer_L-button">❮</button>
-                    <span class="left-section_news-footer_text"><span style="color: rgb(231, 56, 226);" >엔터 소식</span> 더보기 1/3</span>
-                    <button class="left-section_news-footer_R-button">❯</button>
+                    </div>
+                         
+                    <div class="left-section_news-footer">
+                        <button class="left-section_news-footer_L-button">❮</button>
+                        <span class="left-section_news-footer_text"><span style="color: rgb(231, 56, 226);" >엔터 소식</span> 더보기 1/3</span>
+                        <button class="left-section_news-footer_R-button">❯</button>
+                    </div>
                 </div>
             </div>
 
@@ -655,7 +674,7 @@
                         <input type="radio" name="direction" id="right-direction">
                         <div class="popup-g">999+</div>
                         <div class="popup-g2">41</div>
-                        <div class="right-section_id-2-slider_ul-wrapper">
+                        <div class="right-section_id-2-slider_ul-wrapper radius-10">
                             <ul>
                                 <li class="slide"><a class="slide-a" href="">메일</a></li>
                                 <li class="slide"><a class="slide-a" href="">카페</a></li>
@@ -671,10 +690,10 @@
                 </div>
             </div>
             <div class="right-section_ad1 bor-10">
-                <img class="full" src="img/김부각.jpg" alt="광고">
+                <img class="full radius-10" src="img/김부각.jpg" alt="광고">
             </div>
             <div class="right-section_ad2 bor-10">
-                <img class="full" src="img/적립.png" alt="광고">
+                <img class="full radius-10" src="img/적립.png" alt="광고">
             </div>
             <div class="right-section_ad3 bor-10">
                 <div class="right-section_ad3_content-area dp-fx">
@@ -1027,112 +1046,115 @@
 
     <footer>
         <div class="main-footer">
-            <div class="f-top">
-                <ul class="reset">
-                    <li class="reset" >
-                        <a class="dp-fx" href="">
-                            <div class="of-hidden img-sz16"><img class="img-sz16 img-coverC" src="img/푸터광고.jpg" alt=""></div>
-                            <div class="f-top_content-right">
-                                <div class="f-top_content-right-1">초록우산</div>
-                                <div class="mg-t10 sub-2-1 f-top_content-right-2">사랑을 기다리는 쌍둥이 돕기</div>
-                                <div class="mg-t6 sub-2">악취가 새어 나오는<br>쓰레기장 같던 집에서 발견됐어요</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="reset" >
-                        <a class="dp-fx" href="">
-                            <div class="of-hidden img-sz16"><img class="img-sz16 img-coverC" src="img/푸터광고2.png" alt=""></div>
-                            <div class="f-top_content-right">
-                                <div class="f-top_content-right-1">굿피플</div>
-                                <div class="mg-t10 sub-2-1 f-top_content-right-2">생리대 후원하기</div>
-                                <div class="mg-t6 sub-2">월 1만원이면 사라지는<br>저소득층 소녀들의 걱정</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="reset" >
-                        <a class="dp-fx" href="">
-                            <div class="of-hidden img-sz16"><img class="img-sz16 img-coverC" src="img/푸터광고4.png" alt=""></div>
-                            <div class="f-top_content-right">
-                                <div class="f-top_content-right-1">네이버커넥트재단</div>
-                                <div class="mg-t10 sub-2-1 f-top_content-right-2">자료구조 핵심 개념 학습</div>
-                                <div class="mg-t6 sub-2">실무에 적용되는 설계 인사이트<br>자바로 코딩하며 익히기</div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="f-middle-1">
-                <a href="">
-                    <div class="f-middle-1-1 sub-1-1 underline">공지사항</div>
-                    <div class="f-middle-1-2 sub-1-1 underline">서비스 전체보기</div>
-                </a>
-            </div>
-            <div class="f-middle-2">
-                <div class="f-middle-2-1">
-                    <div class="f-middle-2-1-t">
-                        <div class="f-middle-2-1-t-header">Partners</div>
-                        <a href="">
-                            <span>프로젝트 꽃</span>
-                            <span>네이버 비즈니스</span>
-                            <span>네이버 비즈니스 스쿨</span>
-                            <span>네이버 광고</span>
-                            <span>스토어 개설</span>
-                            <span>지역업체 등록</span>
-                            <span>엑스퍼트 등록</span>
-                        </a>
+            <div class="main-footer-1">
+                <div class="f-top">
+                    <ul class="reset">
+                        <li class="reset" >
+                            <a class="dp-fx" href="">
+                                <div class="of-hidden img-sz16"><img class="img-sz16 img-coverC" src="img/푸터광고.jpg" alt=""></div>
+                                <div class="f-top_content-right">
+                                    <div class="f-top_content-right-1">초록우산</div>
+                                    <div class="mg-t10 sub-2-1 f-top_content-right-2">사랑을 기다리는 쌍둥이 돕기</div>
+                                    <div class="mg-t6 sub-2">악취가 새어 나오는<br>쓰레기장 같던 집에서 발견됐어요</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="reset" >
+                            <a class="dp-fx" href="">
+                                <div class="of-hidden img-sz16"><img class="img-sz16 img-coverC" src="img/푸터광고2.png" alt=""></div>
+                                <div class="f-top_content-right">
+                                    <div class="f-top_content-right-1">굿피플</div>
+                                    <div class="mg-t10 sub-2-1 f-top_content-right-2">생리대 후원하기</div>
+                                    <div class="mg-t6 sub-2">월 1만원이면 사라지는<br>저소득층 소녀들의 걱정</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="reset" >
+                            <a class="dp-fx" href="">
+                                <div class="of-hidden img-sz16"><img class="img-sz16 img-coverC" src="img/푸터광고4.png" alt=""></div>
+                                <div class="f-top_content-right">
+                                    <div class="f-top_content-right-1">네이버커넥트재단</div>
+                                    <div class="mg-t10 sub-2-1 f-top_content-right-2">자료구조 핵심 개념 학습</div>
+                                    <div class="mg-t6 sub-2">실무에 적용되는 설계 인사이트<br>자바로 코딩하며 익히기</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="f-middle-1">
+                    <a href="">
+                        <div class="f-middle-1-1 sub-1-1 underline">공지사항</div>
+                        <div class="f-middle-1-2 sub-1-1 underline">서비스 전체보기</div>
+                    </a>
+                </div>
+                <div class="f-middle-2">
+                    <div class="f-middle-2-1">
+                        <div class="f-middle-2-1-t">
+                            <div class="f-middle-2-1-t-header">Partners</div>
+                            <a href="">
+                                <span>프로젝트 꽃</span>
+                                <span>네이버 비즈니스</span>
+                                <span>네이버 비즈니스 스쿨</span>
+                                <span>네이버 광고</span>
+                                <span>스토어 개설</span>
+                                <span>지역업체 등록</span>
+                                <span>엑스퍼트 등록</span>
+                            </a>
+                        </div>
+                        <div class="f-middle-2-1-t mg-t10">
+                            <div class="f-middle-2-1-t-header">Developers</div>
+                            <a href="">
+                                <span>네이버 개발자 센터</span>
+                                <span>오픈 API</span>
+                                <span>오픈소스</span>
+                                <span>네이버 D2</span>
+                                <span>네이버 D2SF</span>
+                                <span>네이버 랩스</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="f-middle-2-1-t mg-t10">
-                        <div class="f-middle-2-1-t-header">Developers</div>
-                        <a href="">
-                            <span>네이버 개발자 센터</span>
-                            <span>오픈 API</span>
-                            <span>오픈소스</span>
-                            <span>네이버 D2</span>
-                            <span>네이버 D2SF</span>
-                            <span>네이버 랩스</span>
-                        </a>
+                    <div class="f-middle-2-2 dp-fx">
+                        <div class="f-middle-2-2-L dp-fx">
+                            <a href="">
+                                <div class="">
+                                    <div class="sub-1-1 ">웨일 브라우저</div>
+                                    <div class="f-middle-2-2-L-2 sub-1">이용안내</div>
+                                </div>
+                            </a>
+                            <div class=""><img class="img-sz17 mg-l11" src="img/웨일.png" alt=""></div>
+                        </div>
+                        <div class="f-middle-2-2-L dp-fx mg-l30">
+                            <a href="">
+                                <div class="">
+                                    <div class="sub-1-1 ">기업 사이트</div>
+                                    <div class="f-middle-2-2-L-2 sub-1">이용안내</div>
+                                </div>
+                            </a>
+                            <div class=""><img class="img-sz17 mg-l11" src="img/흑네이버.png" alt=""></div>
+                        </div>
                     </div>
                 </div>
-                <div class="f-middle-2-2 dp-fx">
-                    <div class="f-middle-2-2-L dp-fx">
-                        <a href="">
-                            <div class="">
-                                <div class="sub-1-1 ">웨일 브라우저</div>
-                                <div class="f-middle-2-2-L-2 sub-1">이용안내</div>
-                            </div>
-                        </a>
-                        <div class=""><img class="img-sz17 mg-l11" src="img/웨일.png" alt=""></div>
-                    </div>
-                    <div class="f-middle-2-2-L dp-fx mg-l30">
-                        <a href="">
-                            <div class="">
-                                <div class="sub-1-1 ">기업 사이트</div>
-                                <div class="f-middle-2-2-L-2 sub-1">이용안내</div>
-                            </div>
-                        </a>
-                        <div class=""><img class="img-sz17 mg-l11" src="img/흑네이버.png" alt=""></div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="f-bottom">
-                <a class="" href="">
-                    <div class="f-bottom_content">
-                        <span>회사소개</span>
-                        <span>인재채용</span>
-                        <span>제휴제안</span>
-                        <span>이용약관</span>
-                        <span>개인정보처리방침</span>
-                        <span>청소년보호정책</span>
-                        <span>네이버 정책</span>
-                        <span>고객센터</span>
-                    </div>
-                    <span class="mg-l30">
-                        <div class="underline">ⓒ NAVER Corp.</div>
-                    </span>
-                </a>
+                <div class="f-bottom">
+                    <a class="" href="">
+                        <div class="f-bottom_content">
+                            <span>회사소개</span>
+                            <span>인재채용</span>
+                            <span>제휴제안</span>
+                            <span>이용약관</span>
+                            <span>개인정보처리방침</span>
+                            <span>청소년보호정책</span>
+                            <span>네이버 정책</span>
+                            <span>고객센터</span>
+                        </div>
+                        <span class="mg-l30">
+                            <div class="underline">ⓒ NAVER Corp.</div>
+                        </span>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
+    </div>
 </body>
 </html>

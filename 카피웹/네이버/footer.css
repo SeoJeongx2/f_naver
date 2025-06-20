@@ -1,24 +1,26 @@
         footer {
-            display: flex;
-            justify-content: center;
             border-top: 1px solid #ccc;       
-            background-color: #f5f6f7;     
+            background-color: #f5f6f7;
+            margin: 0;
+            overflow-x: hidden;
         }
 
         footer a {
             text-decoration: none !important;
             color: black;
         }
-
-        .main-footer {
-            width: 1280px;
+        
+        .main-footer-1 {
             padding-bottom: 78px;
-            margin: 0 30px;
+            margin: 0 auto;
+            width: 1280px;
+
         }
 
         .f-top {
             height: 100px;
             padding: 30px 0;
+            width: 1280px;
         }
         
         .f-top ul {
@@ -32,6 +34,7 @@
 
         .f-top_content-right {
             padding: 0px 3px 0 18px;
+            width: 192px;
         }
         
         .f-top_content-right-1 {
@@ -52,6 +55,9 @@
 
 
 
+        .f-middle-1, .f-middle-2, .f-bottom {
+            width: 1280px;
+        }
 
         .f-middle-1 a {
             display: flex;
