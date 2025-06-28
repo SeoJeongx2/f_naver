@@ -1,7 +1,13 @@
-.right-section {
+        .right-section {
+
+        }
+
+        .right-section_sticky {
             display: inline-block;
             width: 420px;
-            height: 100%;
+            position: sticky;
+            top: 0px;
+            
         }
 
         .right-section_id {
@@ -1249,7 +1255,7 @@
 
 
 
-        .right-section > div:not(:first-child) {
+        .right-section_sticky > div:not(:first-child) {
             margin-top: 16px;
         }
 
