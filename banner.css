@@ -1,0 +1,109 @@
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            max-width: 100%;
+            flex: 1;
+
+        }
+        header, main{
+            max-width: 100%;
+        }
+        .banner-1 {
+            display: flex;
+            width: 1280px;
+            height: 216px;
+            margin: 0px auto;
+        }
+
+        .main-1 {
+            display: flex;
+            width: 1280px;
+            padding-bottom: 60px;
+            margin: 0px auto;
+        }
+
+        .search-bar_left {
+            width: 288px;
+            height: 218px;
+            position: relative;
+        }
+
+        .search-bar_left_icon{
+            position: absolute;
+            top: 10px;
+            left: 0;
+        }
+
+
+        .search-bar_left a img {
+            width: 288px;
+            height: 150px;
+        }
+
+        .search-bar_left  span a img {
+            width: 32px;
+            height: 32px;
+            margin-right: 15px;
+        }
+
+
+        .search-bar_main {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 708px;
+            height: auto;
+        }
+        
+        .search-bar_main .검색{
+            position: absolute;
+            right: 25px;
+            bottom: 110px;
+        }
+
+        .search-bar {
+            width: 705px;
+            height: 55px;
+            margin-top: 50px;
+        }
+
+        .search-bar_main input {
+            width: 670px;
+            height: 57px;
+            border: 1px solid #ccc;
+            border-radius: 40px;
+            padding-left: 30px;
+            font-size: 22px;
+            outline: none;
+            border-color: #10c000;
+        }
+
+        .search-bar_bottom-menu {
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-bar_bottom-menu a {
+            padding: 15px 8px 0 8px;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 300;
+        }
+
+        .search-bar_bottom-menu a img {
+            width: 45px;
+            height: 45px;
+            justify-self: center;
+        }
+
+        .search-bar_right {
+            flex: 1;
+            height: auto;
+            text-align: right;
+        }
+
+        .search-bar_right a  {
+            margin-left: 15px;
+            
+        }

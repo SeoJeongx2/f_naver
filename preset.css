@@ -1,0 +1,709 @@
+.bor-5 {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.bor-10 {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.bor-10-L {
+    border: 1px solid #ccc;
+    border-radius: 10px 0 0 10px;
+}
+
+.bor-10-R {
+    border: 1px solid #ccc;
+    border-radius: 0 10px 10px 0;
+}
+
+.bor-15 {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+.bor-20 {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.bor-20-L {
+    border: 1px solid #ccc;
+    border-radius: 20px 0 0 20px;
+}
+
+.bor-20-R {
+    border: 1px solid #ccc;
+    border-radius: 0 20px 20px 0;
+}
+
+.bor-40 {
+    border: 1px solid #ccc;
+    border-radius: 40px;
+}
+
+.bor-45 {
+    border: 1px solid #ccc;
+    border-radius: 45px;
+}
+
+.bor-50 {
+    border: 1px solid #ccc;
+    border-radius: 50px;
+}
+
+
+.bor-0 {
+    border: none;
+    border-radius: 100px;
+}
+
+
+.tx-dc {
+    text-decoration: none !important;
+}
+
+
+
+
+
+
+.bg-red {
+    background-color: red;
+}
+
+.bg-blue {
+    background-color: blue;
+}
+
+.bg-green {
+    background-color: green;
+}
+
+.bg-gray {
+    background-color: gray;
+}
+
+
+
+
+
+
+.tx-c-g {
+    color: #03c75a;
+    font-weight: bold;
+}
+
+.tx-c-p {
+    color: #9858f5;
+}
+
+.tx-c-y {
+    color: #ebaa00;
+}
+.tx-c-r {
+    color: #cd3534;
+}
+.tx-c-b {
+    color: #3172e7;
+}
+.tx-c-s {
+    color: #32a1ff;
+}
+
+
+.mg-r6 {
+    margin-right: 12px;
+}
+.mg-l6 {
+    margin-left: 6px;
+}
+.mg-l11 {
+    margin-left: 11px;
+}
+.mg-l16 {
+    margin-left: 16px;
+}
+.mg-l24 {
+    margin-left: 24px;
+}
+
+.mg-l30 {
+    margin-left: 30px;
+}
+
+.mg-l-auto {
+    margin-left: auto;
+}
+
+.mg-t16 {
+    margin-top: 16px;
+}
+
+.mg-t10 {
+    margin-top: 10px;
+}
+
+.mg-t7 {
+    margin-top: 7px;
+}
+
+.mg-t6 {
+    margin-top: 6px;
+}
+
+.mg--t1 {
+    margin-top: -1px;
+}
+
+.mg-b3 {
+    margin-bottom: 3px;
+}
+
+.mg-b4 {
+    margin-bottom: 4px;
+}
+
+.mg-b10 {
+    margin-bottom: 10px;
+}
+
+.mg-auto {
+    margin-top: auto;
+}
+
+.graph {
+    position: absolute;
+    background-image: url(img/그래프.png);
+    width: 172px;
+    height: 80px;
+    left: -73px;
+    top: 35px;
+    z-index: 1;
+}
+
+
+
+
+.po-re {
+    position: relative;
+}
+
+
+.dp-bk {
+    display: block;
+}
+.dp-ib {
+    display: inline-block;
+}
+
+.dp-fx {
+    display: flex;
+}
+
+.dp-fxb {
+    display: flexbox;
+}
+
+.w-center {
+    justify-content: center;
+}
+
+.h-center {
+    align-items: center;
+    align-self: center;
+}
+
+.full {
+    width: 100%;
+    height: 100%;
+}
+
+.flex1 {
+    flex: 1;
+}
+
+.in-pl::placeholder {
+    color: rgba(218, 218, 218, 0.6);
+}
+
+
+
+
+
+
+
+.ADX {
+    width: 42px;
+    height: 16px;
+}
+
+.RL {
+    position: relative;
+}
+
+.RL::after {
+    position: absolute;
+    content: "";
+    background-color: #a0a0a0;
+    right: 0;
+    top: 20%;
+    bottom: 5%;
+    width: 1px;
+}
+
+
+
+.LH {
+    position: relative;
+}
+
+.LH::before {
+    position: absolute;
+    content: "•";
+    color: #a3a3a3;
+    left: -6px;
+}
+
+.LH-2 {
+    position: relative;
+}
+
+.LH-2::before {
+    position: absolute;
+    content: "•";
+    color: #a3a3a3;
+    left: -10px;
+}
+
+.LH-3 {
+    position: relative;
+}
+
+.LH-3::before {
+    position: absolute;
+    content: "•";
+    color: #c5c2c2;
+    left: -15px;
+}
+
+.LH-4 {
+    position: relative;
+}
+
+.LH-4::before {
+    position: absolute;
+    content: "•";
+    color: #c5c2c2;
+    left: -17px;
+}
+
+.LH-5 {
+    position: relative;
+}
+
+.LH-5::before {
+    position: absolute;
+    content: "•";
+    color: #c5c2c2;
+    left: -22px;
+}
+
+
+.RP-4 {
+    padding-right: 4px;
+}
+
+.RP-5 {
+    padding-right: 5px;
+}
+
+.RP-7 {
+    padding-right: 7px;
+}
+
+
+.RP-9 {
+    padding-right: 9px;
+}
+
+.LP-4 {
+    padding-left: 4px;
+}
+
+.img-sz1 {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: #a0a0a0;
+}
+
+.img-sz2 {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: #a0a0a0;
+}
+
+.img-sz3 {
+    width: 105px;
+    height: 13px;
+    border-radius: 5px;
+}
+
+.img-sz4 {
+    width: 154px;
+    height: 100px;
+    border: none;
+    border-radius: 5px;
+}
+
+.img-sz5 {
+    width: 250px;
+    height: 144px;
+    border: none;
+    border-radius: 5px;
+}
+
+.img-sz6 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: #eee;
+}
+
+.img-sz7 {
+    width: 182.5px;
+    height: 120px;
+    border:1px solid #eee;
+    border-radius: 5px;
+}
+
+
+.img-sz8 {
+    width: 64px;
+    height: 64px;
+    border: 1px solid #eee;
+    border-radius: 50px;
+}
+
+.img-sz9 {
+    width: 26px;
+    height: 26px;
+    border: 1px solid #eee;
+    border-radius: 50px;
+}
+
+.img-sz11 {
+    width: 86px;
+    height: 86px;
+    border-radius: 5px;
+}
+
+.img-sz10 {
+    width: 90px;
+    height: 90px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #a3a3a3;
+}
+
+.img-sz12 {
+    width: 180px;
+    height: 72px;
+    border-radius: 5px;
+}
+
+.img-sz13 {
+    width: 149px;
+    height: 99px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #a3a3a3;
+}
+
+.img-sz14 {
+    height: 126px;
+    width: 107px;
+    border-radius: 5px;
+}
+
+.img-sz15 {
+    height: 42px;
+    width: 42px;
+    border-radius: 5px;
+}
+
+.img-sz16 {
+    width: 160px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+.img-sz17 {
+    width: 48px;
+    height: 48px;
+    border-radius: 5px;
+}
+
+.radius-5{
+    border-radius: 5px;
+}
+
+.radius-10{
+    border-radius: 10px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.title-2 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.title-3 {
+    font-size: 42px;
+}
+
+.title-4 {
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.title-5 {
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.title-6 {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.title-7 {
+    font-size: 41px;
+    line-height: 50px;
+}
+
+
+
+
+
+.sub {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.sub-1 {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.sub-2 {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.sub-3 {
+    font-size: 13px;
+    font-weight: 300;
+}
+.sub-4 {
+    font-size: 11px;
+    font-weight: 300;
+}
+.sub-1-1 {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.sub-2-1 {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.sub-3-1 {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+.tx-a {
+    text-align: center;
+    justify-self: center;
+}
+
+
+
+
+
+.happy1 {
+    background-image: url(img/back.png);
+    background-size: 463px 442px;
+    background-position: -258px -316px;
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin: 1px 4px 0 0;
+    margin-right: 4px;
+    
+}
+
+
+.vt-al {
+    vertical-align: center;
+}
+
+
+
+.hover-pointer:hover {
+    cursor: pointer;
+
+}
+
+
+.popup-g {
+    box-sizing: border-box;
+    position: absolute;
+    color: #fff;
+    background-color: #03c75a;
+    padding: 0 8px;
+    border: none;
+    border-radius: 12.6px;
+    font-size: 12px;
+    line-height: 24px;
+    top: 0px;
+    left: 31px;
+    min-width: 24px;
+}
+
+.popup-g2 {
+    box-sizing: border-box;
+    position: absolute;
+    color: #fff;
+    background-color: #03c75a;
+    padding: 0 8px;
+    border: none;
+    border-radius: 12.6px;
+    font-size: 12px;
+    line-height: 24px;
+    top: 0px;
+    left: 142px;
+    min-width: 24px;
+}
+
+
+
+
+
+
+
+
+.img-coverA {
+    position: absolute;
+    width: 90px;
+    height: 30px;
+    background-color: rgba(99, 99, 99, 0.6);
+    bottom: 0;
+    text-align: center;
+    display: none;
+    font-weight: 700;
+    color: #fff;
+}
+
+.tran-05 {
+    transition: 0.3s ease;
+}
+
+.img-coverB:hover  .img-coverA {
+    display: block;
+}
+
+.img-coverB:hover img {
+    scale: 1.2;
+}
+
+.of-hidden {
+    overflow: hidden;
+
+}
+
+.img-coverC {
+    transition: 0.3s ease;
+}
+
+.img-coverC:hover {
+    scale: 1.1;
+
+}
+
+
+.underline:hover {
+    text-decoration: underline;
+
+}
+
+
+
+
+
+.width-90 {
+    width: 90px;
+}
+.height-16 {
+    height: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.filter {
+    filter: brightness(95%) grayscale(10%);
+}
+
+
+
+.reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/*         아직 더 연구가 필요함 
+.ic-sizw {
+    --ic-width: 32px;
+    --ic-height: 32px;
+    width: var(--ic-width);
+    height: var(--ic-height);
+}
+
+:root {
+    --ic-width: 32px;
+    --ic-height: 32px;
+} */

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function setColor(color) {
+            const a = document.querySelectorAll('a');
+            let i2 = 0;
+            while(i2 < a.length) {
+                a[i2].style.color= color;
+                i2 = i2 + 1;
+            }
+        }
+        function night_day(self) {
+            
+            var target = document.querySelector('body');
+            var span = self.querySelector('.night_day span');
+            if(self.value === '나이트') {
+            target.style.backgroundColor='black';
+            target.style.color='white';
+            self.value = '데이';
+            span.textContent = '데 이';
+
+            setColor('powderblue');
+            }
+
+            else {
+            target.style.backgroundColor='white';
+            target.style.color='black';
+            self.value = '나이트';
+            span.textContent = '나이트';
+
+            setColor('blue');
+            }
+        }
+    </script>
+    <style>
+        body {
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        .night_day {
+            width: 53px;
+            height: 25px;
+        }
+        .li1 {
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <h1>javascript</h1>
+
+
+    <button class="night_day" value="나이트" onclick="night_day(this)"><span>나이트</span></button>
+    <button class="night_day" value="나이트" onclick="night_day(this)"><span>나이트</span></button>
+    <button class="night_day" value="나이트" onclick="night_day(this)"><span>나이트</span></button>
+    
+    <a href=""><div class="">자바스크립트 연습용 페이지입니다.</div></a>
+    <a href=""><div class="">자바스크립트 연습용 페이지입니다.</div></a>
+    <a href=""><div class="">자바스크립트 연습용 페이지입니다.</div></a>
+    <a href=""><div class="">자바스크립트 연습용 페이지입니다.</div></a>
+    <div class="text">
+        자바 스크립트 연습용 페이지입니다.자바 스크립트 연습용 페이지입니다.자바 스크립트 연습용 페이지입니다.자바 스크립트 연습용 페이지입니다.자바 스크립트 연습용 페이지입니다.자바 스크립트 연습용 페이지입니다.
+        자바 스크립트 연습용 페이지입니다.자바 스크립트 연습용 페이지입니다.자바 스크립트 연습용 페이지입니다.자바 스크립트 연습용 페이지입니다.자바 스크립트 연습용 페이지입니다.자바 스크립트 연습용 페이지입니다.
+        자바 스크립트 연습용 페이지입니다.자바 스크립트 연습용 페이지입니다.자바 스크립트 연습용 페이지입니다.자바 스크립트 연습용 페이지입니다.자바 스크립트 연습용 페이지입니다.자바 스크립트 연습용 페이지입니다.
+        자바 스크립트 연습용 페이지입니다.자바 스크립트 연습용 페이지입니다.자바 스크립트 연습용 페이지입니다.자바 스크립트 연습용 페이지입니다.자바 스크립트 연습용 페이지입니다.자바 스크립트 연습용 페이지입니다.
+    </div>
+    <script>
+        document.write("1<br>");
+        i = 0;
+        while(i < 3) {
+        document.write("2<br>");
+        document.write("3<br>");
+        i = i + 2;
+        }
+        document.write("4<br>");
+    </script>
+    <script>
+        const grup = ["aaa", "bbb", "ccc", "ddd", "eee"];
+
+        let i = 0;
+        while(i < grup.length) {
+        document.write(`<li class="li1">${grup[i]}</li>`);
+        i = i + 1;
+        }
+
+        for(let i1=0; i1 < grup.length; i1++) {
+            document.write('<li class="li1">'+grup[i1]+'</li>')
+        }
+
+    </script>
+</body>
+</html>

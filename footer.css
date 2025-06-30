@@ -1,0 +1,177 @@
+        footer {
+            border-top: 1px solid #ccc;       
+            background-color: #f5f6f7;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        footer a {
+            text-decoration: none !important;
+            color: black;
+        }
+        
+        .main-footer-1 {
+            padding-bottom: 78px;
+            margin: 0 auto;
+            width: 1280px;
+
+        }
+
+        .f-top {
+            height: 100px;
+            padding: 30px 0;
+            width: 1280px;
+        }
+        
+        .f-top ul {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .f-top ul li {
+            width: 410px;
+        }
+
+        .f-top_content-right {
+            padding: 0px 3px 0 18px;
+            width: 192px;
+        }
+        
+        .f-top_content-right-1 {
+            display: inline-block;
+            padding: 0 6px;
+            border-radius: 7px;
+            background-color: #a0adb2;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+            max-width: 141px;
+        }
+
+        .f-top a:hover .f-top_content-right-2 {
+            text-decoration: underline;
+        }
+
+
+
+
+        .f-middle-1, .f-middle-2, .f-bottom {
+            width: 1280px;
+        }
+
+        .f-middle-1 a {
+            display: flex;
+            justify-content: space-between;
+            padding: 21px 0;
+            border-top: 1px solid #ccc;
+        }
+
+        .f-middle-1-2 {
+            position: relative;
+        }
+        
+        .f-middle-1-2::after {
+            position: relative;
+            display: inline-block;
+            content: "";
+            background-image: url(https://pm.pstatic.net/resources/asset/sp_main.04eb92b7.png);
+            background-size: 463px 442px;
+            background-position: -453px -245px;
+            background-repeat: no-repeat;
+            width: 8px;
+            height: 12px;
+            right: 0;
+            margin-left: 10px;
+
+        }
+
+        .f-middle-2 {
+            border-top: 1px solid #ccc;            
+            display: flex;
+            padding: 20px 0;
+            justify-content: space-between;
+        }
+
+        .f-middle-2-1-t {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .f-middle-2-1-t a {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .f-middle-2-1-t a span:hover {
+            text-decoration: underline;
+        }
+
+        .f-middle-2-1-t-header {
+            width: 87px;
+            font-size: 13.7px;
+            font-weight: 500;
+        }
+        
+        .f-middle-2-1-t span {
+            display: inline-block;
+            position: relative;
+            font-size: 13.7px;
+            font-weight: 300;
+        }
+        
+        .f-middle-2-1-t a span:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            width: 1px;
+            background-color: #ccc;
+            top: 25%;
+            bottom: 20%;
+            right: -11px;
+        }
+
+
+        .f-middle-2-2-L a:hover .f-middle-2-2-L-2 {
+            text-decoration: underline;
+        } 
+
+
+
+
+
+
+        .f-bottom {
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+            display: flex;
+            justify-content: center;
+            font-size: 13.7px;
+        }
+        
+        .f-bottom a {
+            display: flex;
+        }
+
+        .f-bottom_content {
+            display: flex;
+            gap: 30px;
+
+        }
+        
+        .f-bottom_content span {
+            position: relative;
+
+        }
+
+        .f-bottom_content span:hover {
+            text-decoration: underline;
+        }
+
+        .f-bottom_content span:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            width: 1px;
+            background-color: #ccc;
+            top: 25%;
+            bottom: 20%;
+            right: -15px;
+        }
