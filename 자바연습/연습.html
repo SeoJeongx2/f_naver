@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+        <h2>a ~ b 짝수값 덧셈</h2>
+
+        <input type="text" id="numberDistinguish1" placeholder="첫번째 값">
+        <input type="text" id="numberDistinguish2" placeholder="두번째 값">
+        <button onclick="checkNumber()">계산</button>
+        <div id="result" style="margin-top: 20px; font-weight: bold;"></div>
+
+        <script>
+            
+
+
+            function checkNumber() {
+                let a = Number(document.getElementById("numberDistinguish1").value);
+                let b = Number(document.getElementById("numberDistinguish2").value);
+                const evenNumber = []; 
+
+                while(a <= b) {
+                    if(a % 2 === 0) {
+                        evenNumber.push(a);
+                    }
+                    a = a + 1
+                }
+
+                //let i = 0;
+                //let sum = 0;
+                //while(i < evenNumber.length) {
+                //    sum += evenNumber[i];
+                //    i = i + 1
+                //}
+
+                //document.getElementById("result").textContent = 
+                //    "합계:"+sum+"["+evenNumber.join(',') +"]"
+            
+        
+                let i = 0;
+                let sum = 0;
+                let text = "";
+                while(i < evenNumber.length) {
+                    sum += evenNumber[i];
+                    text += String(evenNumber[i]);
+                        if(i < evenNumber.length-1){
+                            text += ",";
+                        }
+                    i = i + 1
+                }
+
+                document.getElementById("result").textContent = 
+                "합계:"+sum+"["+ text +"]"
+            }
+        </script>
+
+        <h2>숫자 뭉치의 평균</h2>
+        <input type="text" id="AverageBundle1" placeholder="집합의 갯수">
+        <input type="text" id="AverageBundle2" placeholder="연속된 평균값의 수">
+        <button onclick="AverageBundle()">계산</button>
+        <div id="AverageResult" style="margin-top: 20px; font-weight: bold;"></div>
+
+        <script>
+            function AverageBundle() {
+                let a = Number(document.getElementById("AverageBundle1").value);
+                let b = Number(document.getElementById("AverageBundle2").value);
+                
+                if (isNaN(a) || isNaN(b) || a < b || a <= 0 || b <= 0) {
+                    alert("올바른 숫자를 입력해 주세요. (a ≥ b ≥ 1)");
+                    return;
+                    }
+                
+                    let arr = new Array(a).fill(0).map(() => Math.floor(Math.random()*1000) + 1);
+                let avgArr = []
+                
+                for(j=0; j < a - b +1; j++) {
+                let sum = 0;
+                    for(i=0; i < b; i++) {
+                        sum += arr[j+i];
+                    }
+
+                let avg = (sum/b).toFixed(2);
+                avgArr.push(Number(avg));
+                }
+
+                let max = avgArr[0];
+
+                for (i=1; i<avgArr.length; i++) {
+                    if(avgArr[i] > max) {
+                        max = avgArr[i];
+                    }
+                }
+
+                document.getElementById("AverageResult").innerHTML = 
+                `입력한 갯수만큼의 무작위 배열: [${arr.join(", ")}] 
+                <br> 원하는 평균값의 수: ${b} 
+                <br> 구해진 평균값의 배열: [${avgArr.join(", ")}] 
+                <br> 가장 큰 평균값: ${max}`
+            }
+        </script>
+
+        <h2>배열에서 가장 큰 수 찾기 / 1~20개의 배열수, 0~100사이 난수</h2>
+        <button onclick="findMax()">배열생성</button>
+        <div id="resultFindMax"></div>
+        <script>
+        function findMax() {
+            //let rand = Array(Math.floor(Math.random()*20)+1).fill(0).map(() => Math.floor(Math.random()*101)+0);
+            let rand = Array.from({ length: Math.floor(Math.random()*20)+1}, () => Math.floor(Math.random()*101)+0);
+            let randMax = rand[0];
+            for(let i=1; i < rand.length; i++) {
+                if(randMax < rand[i]) {
+                    randMax = rand[i];
+                }
+            }
+
+            document.getElementById("resultFindMax").innerHTML = 
+            `생성된 랜덤 배열 :  [${rand.join(", ")}]<br>가장 높은 수 :  ${randMax}`
+        }
+        </script>
+
+        <h2>홀수의 합 구하기</h2>
+        <button id="randomOdds" onclick="sumOfOdds()">무작위 배열 생성</button>
+        <div id="randomOddsResult"></div>
+        <script>
+            function sumOfOdds() {
+                let numbers = Array(Math.floor(Math.random()*100)+1).fill(0).map(() => Number(Math.floor(Math.random()*2001)-1000));
+                //let numbers = Array.from({length: Math.floor(Math.random()*100)+1}, () => Number(Math.floor(Math.random()*2001)-1000));
+                let oddNumbers = []
+                for(let i=0; i<numbers.length; i++) {
+                    if(numbers[i] % 2 !== 0) {
+                        oddNumbers.push(numbers[i]);
+                    } 
+                }
+                let sum = 0;
+                for(let j=0; j<oddNumbers.length; j++) {
+                    sum += oddNumbers[j]; 
+                }
+                document.getElementById("randomOddsResult").innerHTML =
+                `무작위 배열 : [${numbers.join(", ")}]<br>
+                 배열 내 홀수 : [${oddNumbers.join(" + ")}]<br>
+                 홀수의 합 : ${sum}`
+            }
+        </script> 
+
+        <h2> 배열에서 가장 많이 등장한 수 찾기</h2>
+        <button id="frequency" onclick="mostFrequentNumber()">무작위 배열 생성</button>
+        <div id="frequencyResult"></div>
+        <script>
+            function mostFrequentNumber () {
+                let randomNumber = Array(Math.floor(Math.random()*100)+1).fill(0).map(() => Number(Math.floor(Math.random()*1000)+1));
+                const count = {};
+
+                for (const num of randomNumber) {
+                    count[num] = (count[num] || 0) + 1;
+                }
+
+                let maxValue = Object.values(count)[0];
+                for (i=1; i < Object.values(count).length; i++) {
+                    if(maxValue < Object.values(count)[i]){
+                        maxValue = Object.values(count)[i];
+
+                    }
+                }
+
+                let maxKey = [];
+                for (let key of Object.keys(count)){
+                    if(count[key] === maxValue) {
+                        maxKey.push(key);
+                    }
+
+                }
+                //const maxValue = Math.max(...Object.values(count));
+                //const maxKey = Object.keys(count).filter(key => count[key] === maxValue);
+                
+                document.getElementById("frequencyResult").innerHTML = 
+                `무작위 배열 : [${randomNumber.join(", ")}]<br>
+                최고 빈도 수 : ${maxKey.join(", ")}<br>
+                등장 횟수 : ${maxValue}`
+            }
+        </script>
+
+        <h2>베열에서 큰 수 찾기</h2>
+        <button id="maxNumber" onclick="findMax()">무작위 배열 생성</button>
+        <div id="findMaxResult"></div>
+        <script>
+            function findMax () {
+                let randomNumber = Array(Math.floor(Math.random()*49) + 2).fill(0).map(() => Math.random()*101 )
+                let heightNumber = randomNumber[0];
+                for(let i=1; i < randomNumber.length; i++) {
+                    if(heightNumber < randomNumber[i]) {
+                        heightNumber = randomNumber[i]
+                    }
+                }
+
+                document.getElementById("findMaxResult").innerHTML = 
+                `랜덤한 수의 배열 : ${randomNumber.join(", ")}<br>
+                가장 높은 수 : ${heightNumber}`
+            }
+        </script>
+
+        <h2>최대값 찾기2</h2>
+        <button id="maxNumber" onclick="highNumber()">랜덤배열 생성</button>
+        <div id="maxNumberRedResult"></div>
+
+        <script>
+            function highNumber () {
+                let arr = Array.from({length: Math.floor(Math.random()*10)+1}, () => Number(Math.floor(Math.random()*100)+1 ));
+                let maxNumber = arr[0];
+                for(let i=1; i<arr.length; i++) {
+                    if(maxNumber < arr[i]) {
+                        maxNumber = arr[i];
+                    }
+                }
+                //let maxNumberRed = arr.map(num => {
+                //    return num === maxNumber
+                //        ?`<span style="color: red; font-weight: bold;">${num}</span>`
+                //        : num;
+                //});
+                let maxNumberRed = [];
+                for (num of arr) {
+                    num === maxNumber
+                        ?maxNumberRed.push(`<span style="color: red; font-weight: bold;">${num}</span>`)
+                        :maxNumberRed.push(num);
+                }
+                document.getElementById("maxNumberRedResult").innerHTML = 
+                `랜덤배열 : [${maxNumberRed.join(", ")}]<br>최대 값 : <span style="color: red; font-weight: bold;">${maxNumber}</span>`
+            }
+        </script>
+        
+        <h2>중복숫자 제거후 정렬</h2>
+        <button id="randomNumber" onclick="randomArray()">랜덤 배열생성</button>
+        <div id="randomNumberResult1"></div>
+
+        <script>
+            function randomArray() {
+                let arr = Array.from({length: Math.floor(Math.random()*10)+40}, () => Math.floor(Math.random()*20)+1);
+                let nonDuplicatedNumber = {};
+                for(keys of arr) {
+                    nonDuplicatedNumber[keys] = (nonDuplicatedNumber[keys] || 0)+1;
+                }
+                let nonDuplicatedNumberArr = Object.keys(nonDuplicatedNumber);
+                let ascendingNumber = nonDuplicatedNumberArr.sort(function(a, b) {   //오름차순으로 정리하기위한 사용법
+                    return a - b;
+                });
+
+                let highNumber = ascendingNumber[0];                                //가장 높은수를 찾기위함
+                for (i=1; i<ascendingNumber.length; i++) {
+                    if(highNumber < ascendingNumber[i]) {
+                        highNumber = ascendingNumber[i];
+                    }
+                }
+
+                let lowNumber = ascendingNumber[0];
+                for (i=1; i<ascendingNumber.length; i++) {
+                    if(lowNumber > ascendingNumber[i]) {
+                        lowNumber = ascendingNumber[i];
+                    }
+                }
+                
+                let redEmphasize = []
+                for (keys in nonDuplicatedNumber) {
+                    if(nonDuplicatedNumber[keys] > 1) {
+                        redEmphasize.push(Number(keys))
+                }}
+
+                //let redEmphasizeArr = [];
+                //for(num of arr) {
+                //    if(redEmphasize.includes(num)) {
+                //        redEmphasizeArr.push(`<span style="color: red; font-weight: bold;">${num}</span>`)
+                //    } else {
+                //        redEmphasizeArr.push(num)
+                //    }}
+
+                let redEmphasizeArr = arr.map(num =>{ 
+                    return redEmphasize.includes(num)
+                    ?`<span style="color: red; font-weight: bold;">${num}</span>`
+                    :num;
+                })    
+
+                document.getElementById("randomNumberResult1").innerHTML = `
+                무작위 배열 : [${redEmphasizeArr.join(", ")}]<br>
+                중복수 제거 : [${nonDuplicatedNumberArr.join(", ")}]<br>
+                오름차순정렬 : [${ascendingNumber.join(", ")}]<br>
+                최상위 수 : ${highNumber}<br>
+                최하위 수 : ${lowNumber}
+                `
+            }
+        </script>
+
+</body>
+</html>
+<!--  
+
+자바 스크립트
+
+연산자
+ •산술 +(문자열끼리의 덧셈 주의), -, *, /, %(나머지)
+ •비교 ==(값만 비교), ===(타입까지 비교), !=(부등호), !==, >, <, >=, <=
+ •논리 &&(and), ||(or), !(not)
+
+조건문(+switch문)과 반복문
+ •조건문
+  if와 else를 사용하며, if(이것일때) {이것이 실행된다.} else { if가 아닐경우 이것이 실행된다.}
+
+ •switch문
+  if문을 활용한 조건의 분기를 명확하고 다양하게 쓸때 사용.
+  let day = 2; switch(day) { case 1: consol.log(“월요일”); break; case 2: consol.log(“화요일”); break; }
+  case와 (값)이 일치시 실행. break은 해당 케이스를 실행후 닫음. default는 else와 같은 역할.
+
+ •반복문 while, for
+  while은 (조건) {이 구역 반복}의 형식으로 사용하며 세부적으로 모두 직접 설정을 해야함.
+	let i=0; while(i<10;) { i = i +1 ; || i++; } 
+
+  for는 (인덱스값; 조건; 증가값) {이 구역 반복}의 형식으로 
+	for(let i=0; i<10; i++) {}의 형식으로 구성됨.
+   -for( 변수A of 배열 )
+	 배열의 모두를 순서대로 꺼내어 대입하는것 = 변수A (or 반복변수) 로 설정 한다는 뜻
+   -for( 키A in 객체 )
+	 객체의 모든 키를 꺼내어 순서대로 대입하는것 = 키A (or 반복변수) 로 설정 한다는 뜻
+	 consol.log(key); || consol.log(객체[key]); 의 사용으로 키와 키값을 꺼낼 수 있음.
+	 Object.key(객체이름)과 Object.values(객체이름)을 통해서 키를 담은 배열, 값을 담은 배열 사용.
+
+ 일반함수와 화살표함수
+  •일반함수 function code(변수) {}의 형식 보편적인 사용방법.
+  •화살표함수 let code= (변수) => {} 의 형식으로 일반함수보다 간결한 대신 new와arguments 사용X
+
+ 배열과 객체
+  •배열 let 배열이름 = [“요소1”, “요소2” or 1, 2 (문자열과 숫자열 구분)] (요소를 담아두는 그릇.)
+	배열이름[0~] 의 형식으로 요소를 꺼내온다.
+  •객체 let 객체이름 = {name: “홍길동”, age: 18}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+split 방식과 배열 Array(10).fill(0) for을 통한 카운팅 방식
+Array.from({length: 변수의 갯수}, ( ) => 변수의 값)
+Array(변수의 갯수).fill(일괄적 변수값 적용).map(( ) =>변수의 값)
+
+join(", ") =   let i = 0;
+                let sum = 0;
+                let text = "";
+                while(i < evenNumber.length) {
+                    sum += evenNumber[i];
+                    text += String(evenNumber[i]);
+                        if(i < evenNumber.length-1){
+                            text += ",";
+                        }
+                    i = i + 1
+                }
+
+if /return 경고메세지?
+
+String과 toString 차이
+
+슬라이딩 윈도우 =  
+for(j=0; j < a - b +1; j++) {
+                let sum = 0;
+                    for(i=0; i < b; i++) {
+                        sum += arr[j+i];
+                    }
+
+                let avg = (sum/b).toFixed(2);
+                avgArr.push(Number(avg));
+                }
+
+짝수와 홀수와 숫자가아닌것 =
+if (isNaN(num)) {
+        resultText = "유효한 숫자를 입력해주세요.";
+      } else if (num % 2 === 0) {
+        resultText = "짝수입니다.";
+      } else {
+        resultText = "홀수입니다.";
+      }
+
+삼항 연산자와 if문
+콜백함수는?
+
+7월 14일 
+for in과
+ for of= 
+for (let i = 0; i < arr.length; i++) {
+  let n = arr[i];
+  sum += n % 2 === 0 ? n : -n;
+}
+의 사용법 그리고 Object.values()와 Object.keys()의 사용법을 배움. 객체에 대해서 자세히 배움
+7월 18일
+map의 사용법 공부중. 맵을 for of로 표현 하는 방법 연구중 return... 솔직히 확 와닿지 못함. 공부가 더 필요
+
+7월 19일 sort()와 includes() 공부
+  -->
